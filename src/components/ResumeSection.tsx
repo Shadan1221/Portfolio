@@ -8,16 +8,18 @@ const ResumeSection = () => {
   return (
     <div className="relative text-white selection:bg-indigo-500/30 overflow-hidden min-h-screen">
       
-      <SpaceBackground />
+      <div className="fixed inset-0 w-full h-screen z-0">
+        <SpaceBackground />
+      </div>
       
       {/* Deep Space Atmosphere */}
-      <div className="fixed top-0 right-0 w-[60rem] h-[60rem] bg-indigo-900/10 blur-[180px] rounded-full z-0 pointer-events-none mix-blend-screen" />
-      <div className="fixed bottom-0 left-0 w-[60rem] h-[60rem] bg-fuchsia-900/10 blur-[180px] rounded-full z-0 pointer-events-none mix-blend-screen" />
+      <div className="fixed top-0 right-0 w-[60rem] h-[60rem] bg-indigo-900/10 blur-[100px] rounded-full z-0 pointer-events-none mix-blend-screen" />
+      <div className="fixed bottom-0 left-0 w-[60rem] h-[60rem] bg-fuchsia-900/10 blur-[100px] rounded-full z-0 pointer-events-none mix-blend-screen" />
 
       <section className="relative z-10 max-w-[1800px] mx-auto px-4 md:px-12 py-32">
         
         {/* SECTION: PROFILE */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32">
+        <div id="about" className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32 scroll-mt-24">
           {/* Header */}
           <div className="lg:col-span-4 lg:sticky lg:top-32 self-start">
             <Reveal>
@@ -26,7 +28,7 @@ const ResumeSection = () => {
               </h2>
               <div className="h-[1px] w-24 bg-white/20 my-8" />
               <p className="font-mono text-xs tracking-widest text-gray-500 uppercase">
-                // Identification_Data
+                {'// Identification_Data'}
               </p>
             </Reveal>
           </div>
@@ -35,17 +37,23 @@ const ResumeSection = () => {
           <div className="lg:col-span-8 flex flex-col gap-8">
             <div className="glass-panel rounded-3xl p-8 md:p-16">
               <Reveal delay={0.1}>
-                <p className="text-2xl md:text-4xl font-light text-gray-200 leading-tight mb-12">
-                  Architecting <span className="text-white font-medium">hyperscale cloud systems</span> and engineering 
-                  <span className="text-white font-medium"> resilient backends</span>. 
-                  Bridging the gap between raw computational power and elegant user experiences.
-                </p>
+                <div className="space-y-6 text-2xl md:text-4xl font-light text-gray-200 leading-tight mb-12">
+                  <p>
+                    I design and build <span className="text-white font-medium">scalable cloud-based applications</span> with a strong focus on <span className="text-white font-medium">backend architecture</span>.
+                  </p>
+                  <p>
+                    I enjoy solving real problems using <span className="text-white font-medium">AI-driven systems</span> and clean, efficient code.
+                  </p>
+                  <p className="text-indigo-300">
+                    Always learning, always building, and always aiming for impact through technology.
+                  </p>
+                </div>
                 <div className="flex flex-wrap gap-4">
                   <MagneticButton className="px-8 py-4 bg-white text-black rounded-full font-heading font-medium tracking-wide text-sm uppercase hover:bg-gray-200 transition-colors">
                     Download Resume
                   </MagneticButton>
                   <MagneticButton className="px-8 py-4 border border-white/20 rounded-full font-heading font-medium tracking-wide text-sm uppercase hover:bg-white/10 transition-colors">
-                    View GitHub
+                    <a href="https://github.com/Shadan1221" target="_blank" rel="noopener noreferrer">View GitHub</a>
                   </MagneticButton>
                 </div>
               </Reveal>
@@ -54,14 +62,14 @@ const ResumeSection = () => {
         </div>
 
         {/* SECTION: MISSIONS (Work) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32">
+        <div id="experience" className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32 scroll-mt-24">
           <div className="lg:col-span-4 lg:sticky lg:top-32 self-start">
              <Reveal>
               <h2 className="text-[12vw] lg:text-[8rem] font-heading font-bold tracking-tighter leading-[0.8] mb-4 text-white/80 hover:text-white transition-colors duration-700">
-                LOGS
+                <TextScramble text="LOGS" />
               </h2>
               <p className="font-mono text-xs tracking-widest text-gray-500 uppercase mt-8">
-                // Operational_History
+                {'// Operational_History'}
               </p>
             </Reveal>
           </div>
@@ -103,14 +111,14 @@ const ResumeSection = () => {
         </div>
 
         {/* SECTION: CONSTELLATIONS (Projects) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32">
+        <div id="projects" className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-32 scroll-mt-24">
           <div className="lg:col-span-4 lg:sticky lg:top-32 self-start">
              <Reveal>
               <h2 className="text-[10vw] lg:text-[6rem] font-heading font-bold tracking-tighter leading-[0.8] mb-4 text-white/80 hover:text-white transition-colors duration-700">
-                SYSTEMS
+                <TextScramble text="SYSTEMS" />
               </h2>
               <p className="font-mono text-xs tracking-widest text-gray-500 uppercase mt-8">
-                // Deployed_Units
+                {'// Deployed_Units'}
               </p>
             </Reveal>
           </div>
@@ -119,12 +127,19 @@ const ResumeSection = () => {
             <div className="glass-panel rounded-[2rem] p-10 flex flex-col justify-between min-h-[500px] group relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-              <div className="relative z-10">
+                <div className="relative z-10">
                 <div className="flex justify-between items-start mb-8">
                   <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">01</div>
-                  <span className="font-mono text-xs text-indigo-400 uppercase tracking-widest border border-indigo-500/30 px-3 py-1 rounded-full">SIH 2025</span>
+                  <div className="flex gap-2">
+                    <a href="https://nagarrakshakfy.netlify.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
+                      Live Demo
+                    </a>
+                    <span className="font-mono text-xs text-indigo-400 uppercase tracking-widest border border-indigo-500/30 px-3 py-1 rounded-full">SIH 2025</span>
+                  </div>
                 </div>
-                <h3 className="text-4xl md:text-5xl font-heading font-medium mb-4 leading-tight">Nagar Rakshak</h3>
+                <a href="https://nagarrakshakfy.netlify.app/" target="_blank" rel="noopener noreferrer" className="block group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-4xl md:text-5xl font-heading font-medium mb-4 leading-tight">Nagar Rakshak</h3>
+                </a>
                 <p className="text-gray-400 leading-relaxed mb-8">
                   AI-driven civic issue reporting platform. Features real-time severity detection and geospatial tracking.
                 </p>
@@ -161,14 +176,14 @@ const ResumeSection = () => {
         </div>
 
         {/* SECTION: TECH MATRIX */}
-        <div className="mb-40">
+        <div id="skills" className="mb-40 scroll-mt-24">
           <Reveal>
             <h2 className="text-[8vw] lg:text-[5rem] font-heading font-bold tracking-tighter uppercase mb-12 text-white/80">
-              Capabilities
+              <TextScramble text="CAPABILITIES" />
             </h2>
             <div className="border-y border-white/10 py-12">
-              <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 md:gap-x-32 opacity-50 hover:opacity-100 transition-opacity duration-700">
-                {['AWS', 'Next.js', 'Python', 'Java', 'Docker', 'PostgreSQL', 'Cryptography'].map((tech, i) => (
+              <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 md:gap-x-32 transition-opacity duration-700">
+                {['Java', 'Python', 'AWS', 'Backend', 'AI/ML', 'Cloud Computing', 'SQL', 'PHP', 'Docker', 'DevOps', 'APIs'].map((tech, i) => (
                   <h3 key={i} className="text-4xl md:text-6xl font-heading font-bold text-transparent text-stroke select-none cursor-default">
                     {tech}
                   </h3>
@@ -184,7 +199,7 @@ const ResumeSection = () => {
             <Reveal>
               <p className="font-mono text-sm tracking-[0.5em] text-gray-500 uppercase mb-8">End of Transmission</p>
               <h2 className="text-[15vw] font-heading font-black leading-none tracking-tighter mb-12 mix-blend-overlay opacity-80">
-                CONNECT
+                <TextScramble text="CONNECT" />
               </h2>
             </Reveal>
             
@@ -202,9 +217,13 @@ const ResumeSection = () => {
             </div>
 
             <div className="mt-24 flex gap-8">
-               {['LinkedIn', 'GitHub', 'Twitter'].map((social, i) => (
-                 <a key={i} href="#" className="text-sm font-mono uppercase tracking-widest text-gray-600 hover:text-white transition-colors">
-                   {social}
+               {[
+                 { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ahmad-shadan-taiyabi-4697a4253/' },
+                 { name: 'GitHub', url: 'https://github.com/Shadan1221' },
+                 { name: 'Gmail', url: 'mailto:shadantaiyabi@gmail.com' }
+               ].map((social, i) => (
+                 <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="text-sm font-mono uppercase tracking-widest text-gray-600 hover:text-white transition-colors">
+                   {social.name}
                  </a>
                ))}
             </div>

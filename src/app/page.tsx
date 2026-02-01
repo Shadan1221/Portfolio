@@ -5,20 +5,77 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue, useMotionTe
 import SpaceBackground from '@/components/ui/SpaceBackground';
 import ResumeSection from '@/components/ResumeSection';
 import MagneticButton from '@/components/ui/MagneticButton';
+import SpaceShooter from '@/components/ui/SpaceShooter';
+import { FloatingDock } from '@/components/ui/floating-dock';
+import BackgroundMusic from '@/components/ui/BackgroundMusic';
+import dynamic from 'next/dynamic';
+
+const SplineScene = dynamic(() => import('@/components/ui/SplineScene'), {
+  ssr: false,
+  loading: () => <div className="w-full h-full invisible"></div>,
+});
+
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconHome,
+  IconUser,
+  IconBriefcase,
+  IconRocket,
+  IconCpu,
+} from '@tabler/icons-react';
+
+const navItems = [
+  {
+    title: "Home",
+    icon: <IconHome className="h-full w-full text-neutral-300" />,
+    href: "#home",
+  },
+  {
+    title: "About",
+    icon: <IconUser className="h-full w-full text-neutral-300" />,
+    href: "#about",
+  },
+  {
+    title: "Experience",
+    icon: <IconBriefcase className="h-full w-full text-neutral-300" />,
+    href: "#experience",
+  },
+  {
+    title: "Projects",
+    icon: <IconRocket className="h-full w-full text-neutral-300" />,
+    href: "#projects",
+  },
+  {
+    title: "Skills",
+    icon: <IconCpu className="h-full w-full text-neutral-300" />,
+    href: "#skills",
+  },
+  {
+    title: "LinkedIn",
+    icon: <IconBrandLinkedin className="h-full w-full text-neutral-300" />,
+    href: "https://www.linkedin.com/in/ahmad-shadan-taiyabi-4697a4253/",
+  },
+  {
+    title: "GitHub",
+    icon: <IconBrandGithub className="h-full w-full text-neutral-300" />,
+    href: "https://github.com/Shadan1221",
+  },
+];
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMove = React.useCallback((e: React.MouseEvent) => {
     const { clientX, clientY, currentTarget } = e;
     const { width, height } = currentTarget.getBoundingClientRect();
     const x = (clientX / width) - 0.5;
     const y = (clientY / height) - 0.5;
     mouseX.set(x);
     mouseY.set(y);
-  };
+  }, [mouseX, mouseY]);
 
   const titleX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-50, 50]), { stiffness: 150, damping: 15 });
   const titleY = useSpring(useTransform(mouseY, [-0.5, 0.5], [-50, 50]), { stiffness: 150, damping: 15 });
@@ -26,6 +83,7 @@ export default function Home() {
   return (
     <>
       <main 
+        id="home"
         ref={containerRef}
         onMouseMove={handleMouseMove}
         className="min-h-screen w-full relative overflow-hidden flex flex-col md:flex-row bg-black"
@@ -51,24 +109,11 @@ export default function Home() {
             </MagneticButton>
           </motion.div>
 
-          {/* Core Focus Area - Refined Typography */}
-          <div className="space-y-2 mb-24 md:mb-0 relative z-10">
-             {['Cloud Infrastructure', 'Scalable Systems', 'Backend Engineering', 'Problem Solving'].map((item, i) => (
-               <motion.div 
-                 key={i}
-                 initial={{ opacity: 0, x: -20 }}
-                 animate={{ opacity: 1, x: 0 }}
-                 transition={{ delay: 1 + (i * 0.1), duration: 0.8 }}
-                 className="flex items-center justify-between group cursor-pointer border-b border-black/10 py-6 hover:border-black transition-colors duration-500 hover:pl-4"
-               >
-                 <span className="font-heading font-bold text-xl tracking-tighter group-hover:text-black text-black transition-all uppercase">{item}</span>
-                 <span className="text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity text-black">0{i+1}</span>
-               </motion.div>
-             ))}
-          </div>
+          {/* Space Shooter Game - Drawer */}
+          <SpaceShooter />
 
-          <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply" 
-               style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
+          <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply" 
+               style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
           </div>
         </motion.div>
 
@@ -82,7 +127,7 @@ export default function Home() {
           <SpaceBackground />
           
           {/* Ambient Glows for Depth */}
-          <div className="absolute top-1/4 right-0 w-[40rem] h-[40rem] bg-indigo-500/20 blur-[150px] rounded-full z-0 pointer-events-none mix-blend-screen animate-pulse-slow" />
+          <div className="absolute top-1/4 right-0 w-[40rem] h-[40rem] bg-indigo-500/10 blur-[80px] rounded-full z-0 pointer-events-none mix-blend-screen" />
 
           {/* Header Actions */}
           
@@ -105,6 +150,17 @@ export default function Home() {
            </motion.div>
         </motion.div>
 
+        {/* Robot Scene - Left Side (Space Shooter) - already positioned inside Left Split logic or handled separately */}
+        
+        {/* Spline Robot - Right Side - Global Position */}
+        <div className="absolute bottom-0 right-0 z-40 pointer-events-none flex items-end justify-end pr-4 pb-4 md:pr-12 md:pb-12">
+           {/* Glow Effect */}
+           <div className="absolute inset-0 bg-indigo-500/10 blur-[60px] rounded-full transform translate-y-10 translate-x-10"></div>
+           <div className="w-[450px] h-[450px] relative">
+              <SplineScene />
+           </div>
+        </div>
+
         {/* Center Massive Typography - Bridging Name */}
         {/* Adjusted z-index to 30 to sit ON TOP of both left (z-10) and right (z-0) panels */}
         <motion.div 
@@ -114,7 +170,7 @@ export default function Home() {
           transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 w-full text-center pointer-events-none select-none mix-blend-difference"
         >
-          <h1 className="text-[18vw] md:text-[25vw] font-black font-heading tracking-tighter leading-none text-white uppercase scale-y-110">
+          <h1 className="text-[12vw] md:text-[18vw] font-black font-heading tracking-tighter leading-none text-white uppercase scale-y-110">
             Shadan
           </h1>
         </motion.div>
@@ -134,6 +190,14 @@ export default function Home() {
       </main>
       
       <ResumeSection />
+      
+      <div className="fixed bottom-8 inset-x-0 z-50 flex justify-center pointer-events-none">
+        <div className="pointer-events-auto">
+          <FloatingDock items={navItems} />
+        </div>
+      </div>
+      
+      <BackgroundMusic />
     </>
   );
 }

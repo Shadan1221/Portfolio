@@ -14,7 +14,7 @@ const TextScramble: React.FC<TextScrambleProps> = ({ text, className = '' }) => 
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const scramble = () => {
+  const scramble = React.useCallback(() => {
     let iteration = 0;
     
     clearInterval(intervalRef.current as NodeJS.Timeout);
@@ -38,13 +38,13 @@ const TextScramble: React.FC<TextScrambleProps> = ({ text, className = '' }) => 
 
       iteration += 1 / 3;
     }, 30);
-  };
+  }, [text]);
 
   useEffect(() => {
     // Initial scramble on mount
     scramble();
     return () => clearInterval(intervalRef.current as NodeJS.Timeout);
-  }, []);
+  }, [scramble]);
 
   return (
     <span 
