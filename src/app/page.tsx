@@ -54,7 +54,7 @@ const navItems = [
   {
     title: "LinkedIn",
     icon: <IconBrandLinkedin className="h-full w-full text-neutral-300" />,
-    href: "https://www.linkedin.com/in/ahmad-shadan-taiyabi-4697a4253/",
+    href: "https://www.linkedin.com/in/shadan-taiyabi",
   },
   {
     title: "GitHub",

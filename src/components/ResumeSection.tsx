@@ -37,20 +37,20 @@ const ResumeSection = () => {
           <div className="lg:col-span-8 flex flex-col gap-8">
             <div className="glass-panel rounded-3xl p-8 md:p-16">
               <Reveal delay={0.1}>
-                <div className="space-y-6 text-2xl md:text-4xl font-light text-gray-200 leading-tight mb-12">
+                <div className="space-y-6 text-xl md:text-3xl font-light text-gray-200 leading-tight mb-12">
                   <p>
-                    I design and build <span className="text-white font-medium">scalable cloud-based applications</span> with a strong focus on <span className="text-white font-medium">backend architecture</span>.
+                    I build intelligent, scalable systems at the intersection of <span className="text-white font-medium">AI</span>, <span className="text-white font-medium">backend engineering</span>, and <span className="text-white font-medium">cloud architecture</span>.
                   </p>
                   <p>
-                    I enjoy solving real problems using <span className="text-white font-medium">AI-driven systems</span> and clean, efficient code.
+                    As a <span className="text-white font-medium">pre-final year</span> <span className="text-white font-medium">B.Tech Computer Science</span> student specializing in Cloud Computing and Virtualization Technology at UPES, Dehradun, I design production-ready applications using <span className="text-white font-medium">AWS</span> and modern backend technologies. I focus on solving real-world problems through <span className="text-white font-medium">AI-driven systems</span>, clean architecture, and scalable design.
                   </p>
                   <p className="text-indigo-300">
-                    Always learning, always building, and always aiming for impact through technology.
+                    Always building. Always improving. Always aiming for impact.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-4">
                   <MagneticButton className="px-8 py-4 bg-white text-black rounded-full font-heading font-medium tracking-wide text-sm uppercase hover:bg-gray-200 transition-colors">
-                    Download Resume
+                    <a href="https://drive.google.com/file/d/1lTfqjxpwSz1tZW7AsBkBvxoVLDrBN97J/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
                   </MagneticButton>
                   <MagneticButton className="px-8 py-4 border border-white/20 rounded-full font-heading font-medium tracking-wide text-sm uppercase hover:bg-white/10 transition-colors">
                     <a href="https://github.com/Shadan1221" target="_blank" rel="noopener noreferrer">View GitHub</a>
@@ -123,51 +123,93 @@ const ResumeSection = () => {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-panel rounded-[2rem] p-10 flex flex-col justify-between min-h-[500px] group relative overflow-hidden">
+          <div className="lg:col-span-8 grid gap-6">
+            {/* Nagar Rakshak */}
+            <div className="glass-panel rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] group relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
-                <div className="relative z-10">
-                <div className="flex justify-between items-start mb-8">
+              <div className="relative z-10">
+                <div className="flex justify-between items-start mb-6">
                   <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">01</div>
                   <div className="flex gap-2">
                     <a href="https://nagarrakshakfy.netlify.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
                       Live Demo
                     </a>
-                    <span className="font-mono text-xs text-indigo-400 uppercase tracking-widest border border-indigo-500/30 px-3 py-1 rounded-full">SIH 2025</span>
+                    <span className="font-mono text-xs text-indigo-400 uppercase tracking-widest border border-indigo-500/30 px-3 py-1 rounded-full">Top 45</span>
                   </div>
                 </div>
                 <a href="https://nagarrakshakfy.netlify.app/" target="_blank" rel="noopener noreferrer" className="block group-hover:text-indigo-400 transition-colors">
-                  <h3 className="text-4xl md:text-5xl font-heading font-medium mb-4 leading-tight">Nagar Rakshak</h3>
+                  <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Nagar Rakshak</h3>
+                  <p className="text-sm text-gray-500 font-mono mb-4">Top 45 in Internal Smart India Hackathon 2025</p>
                 </a>
-                <p className="text-gray-400 leading-relaxed mb-8">
-                  AI-driven civic issue reporting platform. Features real-time severity detection and geospatial tracking.
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  AI-enabled civic complaint system with GPS-based issue reporting, live tracking, and automated severity classification. Built using React (Vite), TypeScript, Supabase, and PostgreSQL.
                 </p>
+                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
+                  <li>• Implemented AI-based issue prioritization and multilingual complaint support</li>
+                  <li>• Integrated real-time updates and community upvoting</li>
+                  <li>• Designed scalable backend with secure auth and structured complaint workflow</li>
+                </ul>
               </div>
               
               <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
-                {['React', 'Supabase', 'AI/ML'].map((t, k) => (
+                {['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'AI/ML'].map((t, k) => (
                   <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
                 ))}
               </div>
             </div>
 
-            <div className="glass-panel rounded-[2rem] p-10 flex flex-col justify-between min-h-[500px] group relative overflow-hidden">
+            {/* Agrasar */}
+            <div className="glass-panel rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] group relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <div className="flex justify-between items-start mb-8">
+                <div className="flex justify-between items-start mb-6">
                   <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">02</div>
-                  <span className="font-mono text-xs text-fuchsia-400 uppercase tracking-widest border border-fuchsia-500/30 px-3 py-1 rounded-full">UDBHAV 2025</span>
+                  <span className="font-mono text-xs text-fuchsia-400 uppercase tracking-widest border border-fuchsia-500/30 px-3 py-1 rounded-full">Top 5</span>
                 </div>
-                <h3 className="text-4xl md:text-5xl font-heading font-medium mb-4 leading-tight">Agrasar</h3>
-                <p className="text-gray-400 leading-relaxed mb-8">
-                  Rural services ecosystem bridging digital divides with Generative AI linguistic models.
+                <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Agrasar</h3>
+                <p className="text-sm text-gray-500 font-mono mb-4">Top 5 in Udhbhav Uttrakhand AI Hackathon (Level 1)</p>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  An integrated digital platform connecting rural citizens with government schemes, grievance systems, and local opportunities.
                 </p>
+                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
+                  <li>• Developed "GramSathi" – multilingual AI chatbot for citizen assistance</li>
+                  <li>• Built modules for scheme discovery, tracking, and grievance redressal</li>
+                  <li>• Designed scalable data architecture for structured public service workflows</li>
+                </ul>
               </div>
               
               <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
-                {['Gen-AI', 'Full Stack', 'Cloud'].map((t, k) => (
+                {['Gen-AI', 'Full Stack', 'Cloud', 'Multilingual AI'].map((t, k) => (
+                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Serverless Image Processing System */}
+            <div className="glass-panel rounded-[2rem] p-10 flex flex-col justify-between min-h-[400px] group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">03</div>
+                  <span className="font-mono text-xs text-purple-400 uppercase tracking-widest border border-purple-500/30 px-3 py-1 rounded-full">AWS</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Serverless Image Processing System</h3>
+                <p className="text-sm text-gray-500 font-mono mb-4">AWS</p>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Cloud-native application leveraging AWS Lambda, S3, IAM, and Rekognition for automated image processing.
+                </p>
+                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
+                  <li>• Implemented serverless workflows for resizing, grayscale conversion, object detection, and text extraction</li>
+                  <li>• Enabled S3 versioning and secure IAM role-based access</li>
+                  <li>• Optimized Lambda resource handling for large image processing</li>
+                </ul>
+              </div>
+              
+              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
+                {['AWS Lambda', 'S3', 'Rekognition', 'IAM', 'Serverless'].map((t, k) => (
                   <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
                 ))}
               </div>
