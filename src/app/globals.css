@@ -25,7 +25,7 @@
     overflow-x: hidden;
   }
 
-  /* Sophisticated Noise Overlay */
+  /* Sophisticated Noise Overlay - Optimized */
   body::after {
     content: "";
     position: fixed;
@@ -37,6 +37,14 @@
     pointer-events: none;
     z-index: 9998; /* Below cursor, above content */
     mix-blend-mode: overlay;
+    will-change: auto; /* Only animate when needed */
+    transform: translateZ(0); /* Force GPU acceleration */
+  }
+
+  /* Performance optimizations */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 

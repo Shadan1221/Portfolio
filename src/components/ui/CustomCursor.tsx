@@ -1,46 +1,42 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
 
 export default function CustomCursor() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const cursorRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    const cursor = cursorRef.current;
+    if (!cursor) return;
+
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      cursor.style.transform = `translate(${e.clientX - 8}px, ${e.clientY - 8}px) scale(${isHovering ? 4 : 1})`;
     };
 
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('.cursor-hover')) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
+      setIsHovering(
+        target.tagName === 'A' || 
+        target.tagName === 'BUTTON' || 
+        !!target.closest('.cursor-hover')
+      );
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-    window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('mousemove', updateMousePosition, { passive: true });
+    window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
     return () => {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
     };
-  }, []);
+  }, [isHovering]);
 
   return (
-    <>
-      <motion.div
-        className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
-        animate={{
-          x: mousePosition.x - 8,
-          y: mousePosition.y - 8,
-          scale: isHovering ? 4 : 1,
-        }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-      />
-    </>
+    <div
+      ref={cursorRef}
+      className="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference transition-transform duration-75"
+      style={{ willChange: 'transform' }}
+    />
   );
 }

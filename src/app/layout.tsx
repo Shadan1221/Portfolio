@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald, Manrope } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/providers/SmoothScroll";
-import CustomCursor from "@/components/ui/CustomCursor";
+import ClientProviders from "@/components/providers/ClientProviders";
 
 const oswald = Oswald({
   variable: "--font-heading",
@@ -31,10 +30,9 @@ export default function RootLayout({
       <body
         className={`${oswald.variable} ${manrope.variable} antialiased bg-black text-white`}
       >
-        <CustomCursor />
-        <SmoothScroll>
+        <ClientProviders>
           {children}
-        </SmoothScroll>
+        </ClientProviders>
       </body>
     </html>
   );

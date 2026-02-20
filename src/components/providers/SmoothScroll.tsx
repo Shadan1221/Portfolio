@@ -1,10 +1,20 @@
 'use client';
 
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import Lenis from 'lenis';
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
+  const [isReady, setIsReady] = useState(false);
+
   useEffect(() => {
+    // Delay initialization to improve FCP
+    const timer = setTimeout(() => setIsReady(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!isReady) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -23,7 +33,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [isReady]);
 
   return <>{children}</>;
 }
