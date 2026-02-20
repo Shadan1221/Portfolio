@@ -107,7 +107,7 @@ export default function Home() {
         
         {/* Left Split: Light Side (Personal Branding) */}
         <div 
-          className="w-full md:w-5/12 bg-[#f4f4f4] text-black relative flex flex-col justify-between p-8 md:p-12 z-10"
+          className="w-full md:w-5/12 min-h-[45vh] md:min-h-0 bg-[#f4f4f4] text-black relative flex flex-col justify-between p-6 md:p-12 z-10"
         >
           
           {/* Logo / Personal Initial */}
@@ -127,12 +127,12 @@ export default function Home() {
 
         {/* Right Split: Dark Side (Cosmic Video) */}
         <div 
-          className="w-full md:w-7/12 bg-[#050505] relative flex flex-col justify-between p-8 md:p-12 overflow-hidden z-0"
+          className="w-full md:w-7/12 min-h-[55vh] md:min-h-0 bg-[#050505] relative flex flex-col justify-between p-6 md:p-12 overflow-hidden z-0"
         >
           {isLoaded && <SpaceBackground />}
           
-          {/* Ambient Glows for Depth */}
-          <div className="absolute top-1/4 right-0 w-[40rem] h-[40rem] bg-indigo-500/10 blur-[80px] rounded-full z-0 pointer-events-none mix-blend-screen" />
+          {/* Ambient Glows for Depth - hidden on mobile for performance */}
+          <div className="hidden md:block absolute top-1/4 right-0 w-[40rem] h-[40rem] bg-indigo-500/10 blur-[80px] rounded-full z-0 pointer-events-none mix-blend-screen" />
 
           {/* Header Actions */}
           
@@ -154,10 +154,10 @@ export default function Home() {
         
         {/* Spline Robot - Right Side - Global Position - Deferred */}
         {isLoaded && (
-          <div className="absolute bottom-0 right-0 z-40 pointer-events-none flex items-end justify-end pr-4 pb-4 md:pr-12 md:pb-12">
+          <div className="absolute bottom-0 right-0 z-40 pointer-events-none flex items-end justify-end pr-2 pb-2 md:pr-12 md:pb-12">
              {/* Glow Effect */}
-             <div className="absolute inset-0 bg-indigo-500/10 blur-[60px] rounded-full transform translate-y-10 translate-x-10"></div>
-             <div className="w-[450px] h-[450px] relative">
+             <div className="hidden md:block absolute inset-0 bg-indigo-500/10 blur-[60px] rounded-full transform translate-y-10 translate-x-10"></div>
+             <div className="w-[180px] h-[180px] md:w-[450px] md:h-[450px] relative">
                 <SplineScene />
              </div>
           </div>
@@ -175,7 +175,7 @@ export default function Home() {
 
         {/* Bottom Subtext */}
          <div className="absolute bottom-[5%] left-1/2 transform -translate-x-1/2 z-30 text-center pointer-events-none mix-blend-difference">
-           <p className="text-white text-xs md:text-sm font-bold uppercase tracking-[0.5em] leading-relaxed opacity-80">
+           <p className="text-white text-[10px] md:text-sm font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] leading-relaxed opacity-80">
              Ahmad Shadan Taiyabi
            </p>
          </div>

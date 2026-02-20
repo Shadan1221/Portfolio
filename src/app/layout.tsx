@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="cursor-none" suppressHydrationWarning>
+    <html lang="en" className="md:cursor-none" suppressHydrationWarning>
       <body
         className={`${oswald.variable} ${manrope.variable} antialiased bg-black text-white`}
       >

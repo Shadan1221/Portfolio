@@ -34,7 +34,7 @@ export default function SplineScene() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 10 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            className="absolute -top-16 right-10 bg-white text-black px-4 py-2 rounded-xl rounded-br-none border-2 border-black font-mono text-sm font-bold shadow-lg z-50 pointer-events-none"
+            className="absolute -top-12 right-4 md:-top-16 md:right-10 bg-white text-black px-3 py-1.5 md:px-4 md:py-2 rounded-xl rounded-br-none border-2 border-black font-mono text-[10px] md:text-sm font-bold shadow-lg z-50 pointer-events-none"
           >
             HI... I AM SHADAN'S BOT
           </motion.div>

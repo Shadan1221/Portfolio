@@ -23,6 +23,8 @@
     font-family: var(--font-body), system-ui, sans-serif;
     position: relative;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
   }
 
   /* Sophisticated Noise Overlay - Optimized */
@@ -41,10 +43,24 @@
     transform: translateZ(0); /* Force GPU acceleration */
   }
 
+  /* Hide noise overlay on mobile for performance */
+  @media (max-width: 767px) {
+    body::after {
+      display: none;
+    }
+  }
+
   /* Performance optimizations */
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure proper touch scrolling on mobile */
+  @media (pointer: coarse) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
 

@@ -5,8 +5,16 @@ import { useEffect, useState, useRef } from 'react';
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
+    // Detect touch devices and hide cursor
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || window.matchMedia('(pointer: coarse)').matches;
+    setIsTouchDevice(isTouch);
+  }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) return;
     const cursor = cursorRef.current;
     if (!cursor) return;
 
@@ -30,7 +38,10 @@ export default function CustomCursor() {
       window.removeEventListener('mousemove', updateMousePosition);
       window.removeEventListener('mouseover', handleMouseOver);
     };
-  }, [isHovering]);
+  }, [isHovering, isTouchDevice]);
+
+  // Don't render cursor on touch/mobile devices
+  if (isTouchDevice) return null;
 
   return (
     <div
