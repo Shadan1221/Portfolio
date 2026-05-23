@@ -77,32 +77,71 @@ const ResumeSection = () => {
           <div className="lg:col-span-8 grid gap-6">
             {[
               {
-                role: "Software Engineer Intern",
                 company: "Innoventory Solutions",
-                period: "2025 - Present",
-                desc: "Engineered high-availability backend microservices. Optimized database queries reducing latency by 40%.",
-                stack: ["PHP", "System Design", "Security"]
+                period: "Nov 2025 - Present • 7 mos",
+                roles: [
+                  {
+                    title: "AI and ML Research Intern",
+                    period: "May 2026 - Present • 1 mo",
+                    desc: "Spearheading research in machine learning models and implementing intelligent inventory optimization algorithms.",
+                    stack: ["AI", "ML", "Research", "Python"]
+                  },
+                  {
+                    title: "Software Engineer Intern",
+                    period: "Nov 2025 - Apr 2026 • 6 mos",
+                    desc: "Engineered professional software portals including cloud storage drive and technical portal.",
+                    stack: ["PHP", "MySQL", "System Design", "Security"]
+                  }
+                ]
               },
               {
-                role: "Social Intern",
+                company: "Norma AI",
+                period: "Mar 2026 - Present • 3 mos",
+                roles: [
+                  {
+                    title: "AI and Cloud Computing Intern",
+                    period: "Mar 2026 - Present",
+                    desc: "Building AI infrastructure for healthcare at Norma AI, a WhatsApp-first platform that connects patients to clinic operations through a single message. Working across AI, cloud infrastructure and system design to reduce operational friction in Indian and UAE healthcare.",
+                    stack: ["AI ML", "LLM", "Cloud Infra", "System Design", "Python"]
+                  }
+                ]
+              },
+              {
                 company: "Roots2Bloom",
                 period: "2024",
-                desc: "Analyzed digital engagement metrics and implemented automated reporting tools for community growth.",
-                stack: ["Analytics", "Automation", "Strategy"]
+                roles: [
+                  {
+                    title: "Social Intern",
+                    period: "June-July 2024",
+                    desc: "Analyzed digital engagement metrics and implemented automated reporting tools for community growth.",
+                    stack: ["Analytics", "Automation", "Strategy"]
+                  }
+                ]
               }
-            ].map((job, i) => (
+            ].map((exp, i) => (
               <div key={i} className="glass-panel rounded-2xl p-6 md:p-12 group hover:border-white/30 transition-all">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-baseline mb-4 md:mb-6">
-                  <h3 className="text-2xl md:text-4xl font-heading font-medium text-white mb-2">{job.role}</h3>
-                  <span className="font-mono text-sm text-gray-500 bg-white/5 px-3 py-1 rounded-full">{job.period}</span>
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-baseline mb-4 md:mb-8">
+                  <h3 className="text-2xl md:text-4xl font-heading font-medium text-white mb-2">{exp.company}</h3>
+                  <span className="font-mono text-sm text-gray-500 bg-white/5 px-3 py-1 rounded-full">{exp.period}</span>
                 </div>
-                <p className="text-lg md:text-xl text-indigo-200 mb-4 md:mb-6">{job.company}</p>
-                <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-2xl">{job.desc}</p>
-                <div className="flex gap-3">
-                  {job.stack.map((tag, j) => (
-                    <span key={j} className="text-xs font-mono uppercase tracking-wider border border-white/10 px-3 py-1 rounded-full text-gray-400 group-hover:text-white group-hover:border-white/30 transition-all">
-                      {tag}
-                    </span>
+                
+                <div className="space-y-12">
+                  {exp.roles.map((job, j) => (
+                    <div key={j} className="relative pl-8 border-l border-white/10 last:border-0 pb-2">
+                      <div className="absolute left-[-5px] top-2 w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.8)]" />
+                      <div className="flex flex-col md:flex-row justify-between items-start md:items-baseline mb-4">
+                        <h4 className="text-xl md:text-2xl font-heading font-medium text-indigo-200">{job.title}</h4>
+                        <span className="font-mono text-xs text-gray-500">{job.period}</span>
+                      </div>
+                      <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 max-w-2xl">{job.desc}</p>
+                      <div className="flex flex-wrap gap-3">
+                        {job.stack.map((tag, k) => (
+                          <span key={k} className="text-[10px] font-mono uppercase tracking-wider border border-white/10 px-3 py-1 rounded-full text-gray-500 group-hover:text-white group-hover:border-white/30 transition-all">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -124,13 +163,48 @@ const ResumeSection = () => {
           </div>
 
           <div className="lg:col-span-8 grid gap-6">
+            {/* Seeker */}
+            <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <div className="flex justify-between items-start mb-4 md:mb-6">
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">01</div>
+                  <div className="flex gap-2">
+                    <a href="https://pathseeker.app" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
+                      Live Demo
+                    </a>
+                    <span className="font-mono text-xs text-blue-400 uppercase tracking-widest border border-blue-500/30 px-3 py-1 rounded-full">Live</span>
+                  </div>
+                </div>
+                <a href="https://pathseeker.app" target="_blank" rel="noopener noreferrer" className="block group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Seeker</h3>
+                  <p className="text-sm text-gray-500 font-mono mb-4">Interactive Career Exploration Map</p>
+                </a>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Seeker is a career exploration platform built specifically for Indian students. It gives students an interactive visual map of 25+ career paths organised across six clusters. Career exploration should feel like navigation, not homework.
+                </p>
+                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
+                  <li>• Interactive visual map of 25+ career paths organised across 6 clusters</li>
+                  <li>• Every career is a node on the map you can walk toward</li>
+                  <li>• AI-powered insights using Groq API (LLama 3.3 70B) and semantic search</li>
+                </ul>
+              </div>
+              
+              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
+                {['React', 'Vite', 'Tailwind', 'Node.js', 'Supabase', 'Python'].map((t, k) => (
+                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
+                ))}
+              </div>
+            </div>
+
             {/* Nagar Rakshak */}
             <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">01</div>
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">02</div>
                   <div className="flex gap-2">
                     <a href="https://nagarrakshakfy.netlify.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
                       Live Demo
@@ -165,7 +239,7 @@ const ResumeSection = () => {
               
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">02</div>
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">03</div>
                   <span className="font-mono text-xs text-fuchsia-400 uppercase tracking-widest border border-fuchsia-500/30 px-3 py-1 rounded-full">Top 5</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Agrasar</h3>
@@ -193,7 +267,7 @@ const ResumeSection = () => {
               
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">03</div>
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">04</div>
                   <span className="font-mono text-xs text-purple-400 uppercase tracking-widest border border-purple-500/30 px-3 py-1 rounded-full">AWS</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Serverless Image Processing System</h3>
@@ -225,7 +299,7 @@ const ResumeSection = () => {
             </h2>
             <div className="border-y border-white/10 py-8 md:py-12">
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-32 md:gap-y-8 transition-opacity duration-700">
-                {['Java', 'Python', 'AWS', 'Backend', 'AI/ML', 'Cloud Computing', 'SQL', 'PHP', 'Docker', 'DevOps', 'APIs'].map((tech, i) => (
+                {['Java', 'Python', 'AWS', 'Backend', 'AI/ML', 'Cloud Computing', 'SQL', 'Supabase', 'PostgreSQL', 'PHP', 'Docker', 'DevOps', 'APIs'].map((tech, i) => (
                   <h3 key={i} className="text-2xl md:text-6xl font-heading font-bold text-transparent text-stroke select-none cursor-default">
                     {tech}
                   </h3>

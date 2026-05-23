@@ -73,13 +73,26 @@
   }
 
   .glass-panel {
-    @apply backdrop-blur-2xl bg-white/[0.02] border border-white/[0.05] transition-all duration-700 ease-out;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+    @apply relative isolate overflow-hidden backdrop-blur-2xl backdrop-saturate-150 bg-slate-950/18 border border-white/[0.09] transition-all duration-700 ease-out;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.035), 0 8px 28px -8px rgba(0, 0, 0, 0.32);
+  }
+
+  .glass-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02) 40%, rgba(255, 255, 255, 0.04));
+    pointer-events: none;
+  }
+
+  .glass-panel > * {
+    position: relative;
+    z-index: 1;
   }
 
   .glass-panel:hover {
-    @apply bg-white/[0.04] border-white/[0.1];
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 20px 40px -12px rgba(0, 0, 0, 0.4);
+    @apply bg-slate-950/24 border-white/[0.14];
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.055), 0 18px 42px -12px rgba(0, 0, 0, 0.42);
   }
 
   .text-gradient {
