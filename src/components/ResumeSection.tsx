@@ -42,15 +42,18 @@ const ResumeSection = () => {
                     I build intelligent, scalable systems at the intersection of <span className="text-white font-medium">AI</span>, <span className="text-white font-medium">backend engineering</span>, and <span className="text-white font-medium">cloud architecture</span>.
                   </p>
                   <p>
-                    As a <span className="text-white font-medium">pre-final year</span> <span className="text-white font-medium">B.Tech Computer Science</span> student specializing in Cloud Computing and Virtualization Technology at UPES, Dehradun, I design production-ready applications using <span className="text-white font-medium">AWS</span> and modern backend technologies. I focus on solving real-world problems through <span className="text-white font-medium">AI-driven systems</span>, clean architecture, and scalable design.
+                    As a <span className="text-white font-medium">final-year</span> <span className="text-white font-medium">B.Tech Computer Science</span> student specializing in Cloud Computing and Virtualization Technology at UPES, Dehradun, I design production-ready applications using <span className="text-white font-medium">AWS</span> and modern backend technologies, and build <span className="text-white font-medium">agentic AI</span> and <span className="text-white font-medium">LLM-powered systems</span> that ship to real users. I focus on solving real-world problems through clean architecture and scalable design.
                   </p>
                   <p className="text-indigo-300">
                     Always building. Always improving. Always aiming for impact.
                   </p>
+                  <p className="text-xs md:text-sm font-mono text-gray-400">
+                    Powered by Claude, Gemini CLI, Antigravity, Codex, and Perplexity — I build fast without cutting corners on security or code quality.
+                  </p>
                 </div>
                 <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
                   <MagneticButton className="px-6 py-3 md:px-8 md:py-4 bg-white text-black rounded-full font-heading font-medium tracking-wide text-xs md:text-sm uppercase hover:bg-gray-200 transition-colors">
-                    <a href="https://drive.google.com/file/d/1lTfqjxpwSz1tZW7AsBkBvxoVLDrBN97J/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
+                    <a href="https://drive.google.com/file/d/1r9ibw6PWI8OzuN6T_cBP0640E2FObBYG/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
                   </MagneticButton>
                   <MagneticButton className="px-6 py-3 md:px-8 md:py-4 border border-white/20 rounded-full font-heading font-medium tracking-wide text-xs md:text-sm uppercase hover:bg-white/10 transition-colors">
                     <a href="https://github.com/Shadan1221" target="_blank" rel="noopener noreferrer">View GitHub</a>
@@ -78,31 +81,25 @@ const ResumeSection = () => {
             {[
               {
                 company: "Innoventory Solutions",
-                period: "Nov 2025 - Present • 7 mos",
+                period: "Nov 2025 - May 2026 • 7 mos",
                 roles: [
                   {
-                    title: "AI and ML Research Intern",
-                    period: "May 2026 - Present • 1 mo",
-                    desc: "Spearheading research in machine learning models and implementing intelligent inventory optimization algorithms.",
-                    stack: ["AI", "ML", "Research", "Python"]
-                  },
-                  {
                     title: "Software Engineer Intern",
-                    period: "Nov 2025 - Apr 2026 • 6 mos",
-                    desc: "Engineered professional software portals including cloud storage drive and technical portal.",
-                    stack: ["PHP", "MySQL", "System Design", "Security"]
+                    period: "Nov 2025 - May 2026",
+                    desc: "Engineered professional software portals including cloud storage drive and technical portal, and conducted machine learning research for intelligent inventory optimization.",
+                    stack: ["PHP", "MySQL", "System Design", "Security", "AI/ML", "Python"]
                   }
                 ]
               },
               {
                 company: "Norma AI",
-                period: "Mar 2026 - Present • 3 mos",
+                period: "March 2026 - July 2026 • 5 mos",
                 roles: [
                   {
                     title: "AI and Cloud Computing Intern",
-                    period: "Mar 2026 - Present",
-                    desc: "Building AI infrastructure for healthcare at Norma AI, a WhatsApp-first platform that connects patients to clinic operations through a single message. Working across AI, cloud infrastructure and system design to reduce operational friction in Indian and UAE healthcare.",
-                    stack: ["AI ML", "LLM", "Cloud Infra", "System Design", "Python"]
+                    period: "March 2026 - July 2026",
+                    desc: "Reduced production LLM inference latency by 57% (700ms to 300ms) while engineering production AI agents that automated appointment booking, rescheduling, cancellations, and follow-ups across voice and WhatsApp channels for a WhatsApp-first healthcare platform connecting patients to clinics across India and the UAE. Built real-time voice AI pipelines using Gemini, Twilio, and ElevenLabs TTS, and developed OCR pipelines to extract and structure patient information from medical documents.",
+                    stack: ["Agentic AI", "LLM Orchestration", "Voice AI", "Gemini API", "Twilio", "OCR"]
                   }
                 ]
               },
@@ -288,6 +285,41 @@ const ResumeSection = () => {
                 ))}
               </div>
             </div>
+
+            {/* Crime Lens */}
+            <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10">
+                <div className="flex justify-between items-start mb-4 md:mb-6">
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">05</div>
+                  <div className="flex gap-2">
+                    <a href="https://crimelens-60080209740.development.catalystserverless.in/app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
+                      Live Demo
+                    </a>
+                    <span className="font-mono text-xs text-cyan-400 uppercase tracking-widest border border-cyan-500/30 px-3 py-1 rounded-full">Datathon 2026</span>
+                  </div>
+                </div>
+                <a href="https://crimelens-60080209740.development.catalystserverless.in/app/" target="_blank" rel="noopener noreferrer" className="block group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Crime Lens</h3>
+                  <p className="text-sm text-gray-500 font-mono mb-4">Agentic AI Investigation Co-Pilot — Karnataka State Police</p>
+                </a>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Crime Lens is an agentic AI crime-intelligence platform built for Datathon 2026, centered around IRIS, a bilingual (English + Kannada) conversational investigation co-pilot for law enforcement.
+                </p>
+                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
+                  <li>• Architected a multi-agent orchestration layer (Analytics, Graph, Case Intelligence, Prediction, Governance agents) with Python, FastAPI, and the Gemini API</li>
+                  <li>• Built an explainable-AI governance layer generating confidence scores, reasoning trails, and an immutable audit log for every response</li>
+                  <li>• Achieved 0.38s latency at 70.5-99.4% accuracy on vector similarity search, and 0.12s latency for AI fraud-risk verification</li>
+                </ul>
+              </div>
+
+              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
+                {['Python', 'FastAPI', 'Gemini API', 'Multi-Agent Systems', 'Explainable AI'].map((t, k) => (
+                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -299,7 +331,7 @@ const ResumeSection = () => {
             </h2>
             <div className="border-y border-white/10 py-8 md:py-12">
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-x-32 md:gap-y-8 transition-opacity duration-700">
-                {['Java', 'Python', 'AWS', 'Backend', 'AI/ML', 'Cloud Computing', 'SQL', 'Supabase', 'PostgreSQL', 'PHP', 'Docker', 'DevOps', 'APIs'].map((tech, i) => (
+                {['Java', 'Python', 'AWS', 'Backend', 'Agentic AI', 'LLM', 'RAG', 'Cloud Computing', 'Node.js', 'React', 'SQL', 'Supabase', 'PostgreSQL', 'PHP', 'Docker', 'DevOps', 'APIs'].map((tech, i) => (
                   <h3 key={i} className="text-2xl md:text-6xl font-heading font-bold text-transparent text-stroke select-none cursor-default">
                     {tech}
                   </h3>
