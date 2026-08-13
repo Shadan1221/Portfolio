@@ -118,6 +118,148 @@ const projectsData = [
   }
 ];
 
+const hackathonsData = [
+  {
+    id: "01",
+    title: "Udbhav 2025 – Emerging Tech AI Hackathon",
+    organizer: "Department of IT, Govt of Uttarakhand & UPES",
+    rank: "🏆 Top 5 Winner",
+    date: "November 14, 2025",
+    description: "Awarded Top 5 in the state-level emerging technology AI hackathon for architecting 'Agrasar' and 'GramSathi'—a bilingual AI public service co-pilot connecting rural citizens with government schemes and grievance systems.",
+    certificateUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
+    badges: ["State Govt Hackathon", "Top 5 Winner", "Bilingual AI"],
+    hoverGradient: "from-amber-900/40",
+    badgeColor: "text-amber-400 border-amber-500/30"
+  },
+  {
+    id: "02",
+    title: "Smart India Hackathon 2025 (Internal Round)",
+    organizer: "Ministry of Education, MoE's Innovation Cell & AICTE",
+    rank: "🏆 Finalist Team (Top 45)",
+    date: "September 11-12, 2025",
+    description: "Secured finalist position among top teams at UPES for building 'Nagar Rakshak'—an AI civic complaint system with real-time GPS reporting, automated severity classification, and community upvoting.",
+    certificateUrl: "/certificates/hackathon/SIH 25_- Ahmad  Shadan  Taiyabi.pdf",
+    badges: ["Ministry of Education", "AICTE", "Top 45 Finalist"],
+    hoverGradient: "from-indigo-900/40",
+    badgeColor: "text-indigo-400 border-indigo-500/30"
+  },
+  {
+    id: "03",
+    title: "TCS CodeVita Season XII",
+    organizer: "Tata Consultancy Services (TCS)",
+    rank: "🌐 Global Rank 3,641",
+    date: "Season XII (2024-2025)",
+    description: "Achieved Global Rank 3,641 out of 100,000+ competitive programmers worldwide in the world's largest competitive coding contest organized by TCS.",
+    certificateUrl: "/certificates/hackathon/TCS CodeVita Season 12 Certificate - shadan1221.pdf",
+    badges: ["Global Contest", "Rank 3641", "Algorithms"],
+    hoverGradient: "from-cyan-900/40",
+    badgeColor: "text-cyan-400 border-cyan-500/30"
+  },
+  {
+    id: "04",
+    title: "Devcation Delhi 2026",
+    organizer: "Google Developer Groups (GDG) IGDTUW x IIT Delhi",
+    rank: "🚀 Hackathon Participant",
+    date: "2026",
+    description: "Participated in Devcation Delhi 2026 organized by GDG IGDTUW and IIT Delhi, building cutting-edge web and AI platform solutions.",
+    certificateUrl: "/certificates/hackathon/Devcation 26_ IITD.pdf",
+    badges: ["GDG on Campus", "IIT Delhi", "Full Stack AI"],
+    hoverGradient: "from-emerald-900/40",
+    badgeColor: "text-emerald-400 border-emerald-500/30"
+  },
+  {
+    id: "05",
+    title: "#ImagineThat Idea Pitch",
+    organizer: "Tata Group",
+    rank: "💡 Certificate of Appreciation",
+    date: "2025",
+    description: "Earned Certificate of Appreciation for pitching innovative technological concepts in the Tata Group #ImagineThat national idea pitch.",
+    certificateUrl: "/certificates/hackathon/Certificate of Appreciation- Tata  Group.pdf",
+    badges: ["Tata Group", "Corporate Pitch", "Innovation"],
+    hoverGradient: "from-blue-900/40",
+    badgeColor: "text-blue-400 border-blue-500/30"
+  },
+  {
+    id: "06",
+    title: "Adobe India Hackathon",
+    organizer: "Adobe & Unstop",
+    rank: "🎯 Round 1 Qualifier",
+    date: "2024-2025",
+    description: "Qualified Round 1 Online MCQ Assessment + Coding challenge in Adobe India national hackathon.",
+    certificateUrl: "/certificates/hackathon/adobe hackathon.pdf",
+    badges: ["Adobe", "Competitive Coding", "Unstop"],
+    hoverGradient: "from-rose-900/40",
+    badgeColor: "text-rose-400 border-rose-500/30"
+  },
+  {
+    id: "07",
+    title: "Code Clash – IGDTUW",
+    organizer: "Indira Gandhi Delhi Technical University for Women (IGDTUW)",
+    rank: "💻 Hackathon Participant",
+    date: "2025",
+    description: "Participated in Code Clash competitive programming hackathon hosted by IGDTUW and Unstop.",
+    certificateUrl: "/certificates/hackathon/code-clash-igdtuw.pdf",
+    badges: ["IGDTUW", "Code Clash", "Unstop"],
+    hoverGradient: "from-purple-900/40",
+    badgeColor: "text-purple-400 border-purple-500/30"
+  }
+];
+
+const certificationsData = [
+  {
+    id: "01",
+    title: "AWS Academy Graduate – Cloud Architecting",
+    issuer: "Amazon Web Services (AWS Academy)",
+    date: "Issued Nov 24, 2025",
+    hours: "60 Hours Intensive Curriculum",
+    description: "Advanced training covering AWS multi-tier architecture, high availability, fault tolerance, VPC network design, IAM security policies, and cost optimization.",
+    certificateUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.pdf",
+    credlyUrl: "https://www.credly.com/go/XTEi9VXt",
+    badges: ["AWS Cloud Architecting", "60 Hours", "Credly Verified"],
+    hoverGradient: "from-purple-900/40",
+    badgeColor: "text-purple-400 border-purple-500/30"
+  },
+  {
+    id: "02",
+    title: "AWS Academy Graduate – Cloud Operations",
+    issuer: "Amazon Web Services (AWS Academy)",
+    date: "Issued Nov 24, 2025",
+    hours: "40 Hours SysOps & DevOps Curriculum",
+    description: "Specialized coursework focusing on AWS Cloud Operations, system administration, automated resource provisioning, CloudWatch monitoring, and security compliance.",
+    certificateUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.pdf",
+    credlyUrl: "https://www.credly.com/go/6tbfOKoi",
+    badges: ["AWS Cloud Operations", "40 Hours", "Credly Verified"],
+    hoverGradient: "from-indigo-900/40",
+    badgeColor: "text-indigo-400 border-indigo-500/30"
+  },
+  {
+    id: "03",
+    title: "AWS Academy Graduate – Cloud Foundations",
+    issuer: "Amazon Web Services (AWS Academy)",
+    date: "Issued Apr 26, 2025",
+    hours: "20 Hours Core Infrastructure",
+    description: "Comprehensive foundation in AWS cloud computing concepts, core infrastructure services (EC2, S3, RDS, Lambda), cloud security, and pricing models.",
+    certificateUrl: "/certificates/certifications/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.pdf",
+    credlyUrl: "https://www.credly.com/go/6Xi5kR50",
+    badges: ["AWS Cloud Foundations", "20 Hours", "Credly Verified"],
+    hoverGradient: "from-blue-900/40",
+    badgeColor: "text-blue-400 border-blue-500/30"
+  },
+  {
+    id: "04",
+    title: "AI Fluency: Framework & Foundations",
+    issuer: "Anthropic Academy",
+    date: "Issued 2025-2026",
+    hours: "LLM Foundations & Prompt Engineering",
+    description: "Certified by Anthropic Academy on AI fluency frameworks, LLM architecture principles, prompt engineering, agentic workflow design, and ethical AI deployment.",
+    certificateUrl: "/certificates/certifications/Anthropic Academy- AI Fluency Framework & Foundations.pdf",
+    credlyUrl: null,
+    badges: ["Anthropic AI", "AI Fluency", "LLM Frameworks"],
+    hoverGradient: "from-emerald-900/40",
+    badgeColor: "text-emerald-400 border-emerald-500/30"
+  }
+];
+
 const ResumeSection = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const categories = ['All', 'Agentic AI / LLMs', 'Cloud & Systems', 'Hackathons'];
@@ -391,6 +533,144 @@ const ResumeSection = () => {
                   </div>
                 </div>
               ))}
+          </div>
+        </div>
+
+        {/* SECTION: HACKATHONS & COMPETITIONS */}
+        <div id="hackathons" className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 mb-16 md:mb-32 scroll-mt-24">
+          <div className="lg:col-span-4 lg:sticky lg:top-32 self-start">
+             <Reveal>
+              <h2 className="text-[10vw] lg:text-[6rem] font-heading font-bold tracking-tighter leading-[0.8] mb-4 text-white/80 hover:text-white transition-colors duration-700">
+                <TextScramble text="HONORS" />
+              </h2>
+              <p className="font-mono text-xs tracking-widest text-gray-500 uppercase mt-8">
+                {'// Competitive_Records'}
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="lg:col-span-8 flex flex-col gap-6">
+            {hackathonsData.map((item) => (
+              <div
+                key={item.id}
+                className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[250px] group relative overflow-hidden transition-all duration-500 hover:border-white/30"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-t ${item.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                <div className="relative z-10">
+                  <div className="flex flex-wrap justify-between items-start mb-4 gap-3">
+                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-heading text-lg bg-black/50 backdrop-blur-md">
+                      {item.id}
+                    </div>
+                    <div className="flex flex-wrap gap-2 items-center">
+                      <span className={`font-mono text-xs uppercase tracking-widest border px-3 py-1 rounded-full ${item.badgeColor}`}>
+                        {item.rank}
+                      </span>
+                      {item.certificateUrl && (
+                        <a
+                          href={item.certificateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
+                        >
+                          View Certificate ↗
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-heading font-medium mb-1 leading-tight text-white">{item.title}</h3>
+                  <div className="flex flex-wrap gap-4 text-xs text-gray-400 font-mono mb-3">
+                    <span className="text-indigo-300">{item.organizer}</span>
+                    <span>• {item.date}</span>
+                  </div>
+
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
+                </div>
+
+                <div className="relative z-10 border-t border-white/10 pt-4 flex flex-wrap gap-2">
+                  {item.badges.map((b, k) => (
+                    <span key={k} className="text-xs font-mono font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">
+                      {b}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* SECTION: CERTIFICATIONS */}
+        <div id="certifications" className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 mb-16 md:mb-32 scroll-mt-24">
+          <div className="lg:col-span-4 lg:sticky lg:top-32 self-start">
+             <Reveal>
+              <h2 className="text-[10vw] lg:text-[5rem] font-heading font-bold tracking-tighter leading-[0.8] mb-4 text-white/80 hover:text-white transition-colors duration-700">
+                <TextScramble text="CREDENTIALS" />
+              </h2>
+              <p className="font-mono text-xs tracking-widest text-gray-500 uppercase mt-8">
+                {'// Verified_Certificates'}
+              </p>
+            </Reveal>
+          </div>
+
+          <div className="lg:col-span-8 flex flex-col gap-6">
+            {certificationsData.map((cert) => (
+              <div
+                key={cert.id}
+                className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[250px] group relative overflow-hidden transition-all duration-500 hover:border-white/30"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-t ${cert.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                <div className="relative z-10">
+                  <div className="flex flex-wrap justify-between items-start mb-4 gap-3">
+                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-heading text-lg bg-black/50 backdrop-blur-md">
+                      {cert.id}
+                    </div>
+                    <div className="flex flex-wrap gap-2 items-center">
+                      <span className={`font-mono text-xs uppercase tracking-widest border px-3 py-1 rounded-full ${cert.badgeColor}`}>
+                        {cert.hours}
+                      </span>
+                      {cert.credlyUrl && (
+                        <a
+                          href={cert.credlyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-xs text-amber-300 uppercase tracking-widest border border-amber-500/30 px-3 py-1 rounded-full hover:bg-amber-400 hover:text-black transition-colors"
+                        >
+                          Verify Credly ↗
+                        </a>
+                      )}
+                      {cert.certificateUrl && (
+                        <a
+                          href={cert.certificateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
+                        >
+                          View Certificate ↗
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-heading font-medium mb-1 leading-tight text-white">{cert.title}</h3>
+                  <div className="flex flex-wrap gap-4 text-xs text-gray-400 font-mono mb-3">
+                    <span className="text-indigo-300">{cert.issuer}</span>
+                    <span>• {cert.date}</span>
+                  </div>
+
+                  <p className="text-gray-400 text-sm leading-relaxed mb-4">{cert.description}</p>
+                </div>
+
+                <div className="relative z-10 border-t border-white/10 pt-4 flex flex-wrap gap-2">
+                  {cert.badges.map((b, k) => (
+                    <span key={k} className="text-xs font-mono font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">
+                      {b}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

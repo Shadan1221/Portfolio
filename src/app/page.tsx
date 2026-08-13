@@ -30,6 +30,8 @@ import {
   IconUser,
   IconBriefcase,
   IconRocket,
+  IconTrophy,
+  IconAward,
   IconCpu,
 } from '@tabler/icons-react';
 
@@ -53,6 +55,16 @@ const navItems = [
     title: "Projects",
     icon: <IconRocket className="h-full w-full text-neutral-300" />,
     href: "#projects",
+  },
+  {
+    title: "Hackathons",
+    icon: <IconTrophy className="h-full w-full text-neutral-300" />,
+    href: "#hackathons",
+  },
+  {
+    title: "Certifications",
+    icon: <IconAward className="h-full w-full text-neutral-300" />,
+    href: "#certifications",
   },
   {
     title: "Skills",
@@ -134,12 +146,6 @@ export default function Home() {
           {/* Ambient Glows for Depth - hidden on mobile for performance */}
           <div className="hidden md:block absolute top-1/4 right-0 w-[40rem] h-[40rem] bg-indigo-500/10 blur-[80px] rounded-full z-0 pointer-events-none mix-blend-screen" />
 
-          {/* Header Actions */}
-          
-
-          {/* Intro Text */}
-          
-          
            {/* Bottom Details */}
            <div className="relative z-10 mt-auto flex flex-col items-end gap-2 text-right">
                <div className="flex items-center gap-2">
@@ -149,8 +155,6 @@ export default function Home() {
                <span className="font-mono text-sm text-white uppercase tracking-wider hover:text-indigo-400 transition-colors cursor-pointer border-b border-transparent hover:border-indigo-400">+91 6388599818</span>
            </div>
         </div>
-
-        {/* Robot Scene - Left Side (Space Shooter) - already positioned inside Left Split logic or handled separately */}
         
         {/* Spline Robot - Right Side - Global Position - Deferred */}
         {isLoaded && (
