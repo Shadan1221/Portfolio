@@ -1,10 +1,127 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Reveal } from '@/components/ui/Reveal';
 import SpaceBackground from '@/components/ui/SpaceBackground';
 import TextScramble from '@/components/ui/TextScramble';
 import MagneticButton from '@/components/ui/MagneticButton';
 
+const projectsData = [
+  {
+    id: "01",
+    title: "Seeker",
+    subtitle: "Interactive Career Exploration Map",
+    demoUrl: "https://pathseeker.app",
+    badgeText: "Live",
+    badgeColor: "text-blue-400 border-blue-500/30",
+    hoverGradient: "from-blue-900/40",
+    hoverTitleColor: "group-hover:text-blue-400",
+    categories: ["Agentic AI / LLMs"],
+    description: "Seeker is a career exploration platform built specifically for Indian students. It gives students an interactive visual map of 25+ career paths organised across six clusters. Career exploration should feel like navigation, not homework.",
+    points: [
+      "Interactive visual map of 25+ career paths organised across 6 clusters",
+      "Every career is a node on the map you can walk toward",
+      "AI-powered insights using Groq API (LLama 3.3 70B) and semantic search"
+    ],
+    metricBadges: [
+      { text: "⚡ LLaMA 3.3 70B", color: "bg-blue-500/10 text-blue-300 border-blue-500/20" },
+      { text: "🗺️ 25+ Career Clusters", color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20" }
+    ],
+    stack: ['React', 'Vite', 'Tailwind', 'Node.js', 'Supabase', 'Python']
+  },
+  {
+    id: "02",
+    title: "Nagar Rakshak",
+    subtitle: "Top 45 in Internal Smart India Hackathon 2025",
+    demoUrl: "https://nagarrakshakfy.netlify.app/",
+    badgeText: "Top 45",
+    badgeColor: "text-indigo-400 border-indigo-500/30",
+    hoverGradient: "from-indigo-900/40",
+    hoverTitleColor: "group-hover:text-indigo-400",
+    categories: ["Hackathons", "Agentic AI / LLMs", "Cloud & Systems"],
+    description: "AI-enabled civic complaint system with GPS-based issue reporting, live tracking, and automated severity classification. Built using React (Vite), TypeScript, Supabase, and PostgreSQL.",
+    points: [
+      "Implemented AI-based issue prioritization and multilingual complaint support",
+      "Integrated real-time updates and community upvoting",
+      "Designed scalable backend with secure auth and structured complaint workflow"
+    ],
+    metricBadges: [
+      { text: "🏆 SIH 2025 Top 45", color: "bg-amber-500/10 text-amber-300 border-amber-500/20" },
+      { text: "📍 Real-Time GPS Tracking", color: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20" }
+    ],
+    stack: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'AI/ML']
+  },
+  {
+    id: "03",
+    title: "Agrasar",
+    subtitle: "Top 5 in Udhbhav Uttrakhand AI Hackathon (Level 1)",
+    demoUrl: null,
+    badgeText: "Top 5",
+    badgeColor: "text-fuchsia-400 border-fuchsia-500/30",
+    hoverGradient: "from-fuchsia-900/40",
+    hoverTitleColor: "group-hover:text-fuchsia-400",
+    categories: ["Hackathons", "Agentic AI / LLMs"],
+    description: "An integrated digital platform connecting rural citizens with government schemes, grievance systems, and local opportunities.",
+    points: [
+      "Developed \"GramSathi\" – multilingual AI chatbot for citizen assistance",
+      "Built modules for scheme discovery, tracking, and grievance redressal",
+      "Designed scalable data architecture for structured public service workflows"
+    ],
+    metricBadges: [
+      { text: "🏆 Top 5 AI Hackathon", color: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20" },
+      { text: "🤖 GramSathi Multilingual AI", color: "bg-pink-500/10 text-pink-300 border-pink-500/20" }
+    ],
+    stack: ['Gen-AI', 'Full Stack', 'Cloud', 'Multilingual AI']
+  },
+  {
+    id: "04",
+    title: "Serverless Image Processing System",
+    subtitle: "AWS Cloud Native Architecture",
+    demoUrl: null,
+    badgeText: "AWS",
+    badgeColor: "text-purple-400 border-purple-500/30",
+    hoverGradient: "from-purple-900/40",
+    hoverTitleColor: "group-hover:text-purple-400",
+    categories: ["Cloud & Systems"],
+    description: "Cloud-native application leveraging AWS Lambda, S3, IAM, and Rekognition for automated image processing.",
+    points: [
+      "Implemented serverless workflows for resizing, grayscale conversion, object detection, and text extraction",
+      "Enabled S3 versioning and secure IAM role-based access",
+      "Optimized Lambda resource handling for large image processing"
+    ],
+    metricBadges: [
+      { text: "☁️ AWS Serverless", color: "bg-purple-500/10 text-purple-300 border-purple-500/20" },
+      { text: "👁️ Rekognition Automation", color: "bg-violet-500/10 text-violet-300 border-violet-500/20" }
+    ],
+    stack: ['AWS Lambda', 'S3', 'Rekognition', 'IAM', 'Serverless']
+  },
+  {
+    id: "05",
+    title: "Crime Lens",
+    subtitle: "Agentic AI Investigation Co-Pilot — Karnataka State Police",
+    demoUrl: "https://crimelens-60080209740.development.catalystserverless.in/app/",
+    badgeText: "Datathon 2026",
+    badgeColor: "text-cyan-400 border-cyan-500/30",
+    hoverGradient: "from-cyan-900/40",
+    hoverTitleColor: "group-hover:text-cyan-400",
+    categories: ["Agentic AI / LLMs", "Cloud & Systems", "Hackathons"],
+    description: "Crime Lens is an agentic AI crime-intelligence platform built for Datathon 2026, centered around IRIS, a bilingual (English + Kannada) conversational investigation co-pilot for law enforcement.",
+    points: [
+      "Architected a multi-agent orchestration layer (Analytics, Graph, Case Intelligence, Prediction, Governance agents) with Python, FastAPI, and the Gemini API",
+      "Built an explainable-AI governance layer generating confidence scores, reasoning trails, and an immutable audit log for every response",
+      "Achieved 0.38s latency at 70.5-99.4% accuracy on vector similarity search, and 0.12s latency for AI fraud-risk verification"
+    ],
+    metricBadges: [
+      { text: "⚡ 0.38s Vector Latency", color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20" },
+      { text: "🛡️ Explainable AI Governance", color: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20" },
+      { text: "⚡ 0.12s Fraud Risk Verification", color: "bg-teal-500/10 text-teal-300 border-teal-500/20" }
+    ],
+    stack: ['Python', 'FastAPI', 'Gemini API', 'Multi-Agent Systems', 'Explainable AI']
+  }
+];
+
 const ResumeSection = () => {
+  const [activeCategory, setActiveCategory] = useState<string>('All');
+  const categories = ['All', 'Agentic AI / LLMs', 'Cloud & Systems', 'Hackathons'];
+
   return (
     <div className="relative text-white selection:bg-indigo-500/30 overflow-hidden min-h-screen">
       
@@ -99,6 +216,10 @@ const ResumeSection = () => {
                     title: "AI and Cloud Computing Intern",
                     period: "March 2026 - July 2026",
                     desc: "Reduced production LLM inference latency by 57% (700ms to 300ms) while engineering production AI agents that automated appointment booking, rescheduling, cancellations, and follow-ups across voice and WhatsApp channels for a WhatsApp-first healthcare platform connecting patients to clinics across India and the UAE. Built real-time voice AI pipelines using Gemini, Twilio, and ElevenLabs TTS, and developed OCR pipelines to extract and structure patient information from medical documents.",
+                    metrics: [
+                      "⚡ 57% LLM Latency Reduction (700ms → 300ms)",
+                      "🎙️ Voice AI & WhatsApp Agents"
+                    ],
                     stack: ["Agentic AI", "LLM Orchestration", "Voice AI", "Gemini API", "Twilio", "OCR"]
                   }
                 ]
@@ -130,6 +251,21 @@ const ResumeSection = () => {
                         <h4 className="text-xl md:text-2xl font-heading font-medium text-indigo-200">{job.title}</h4>
                         <span className="font-mono text-xs text-gray-500">{job.period}</span>
                       </div>
+
+                      {/* Highlight Metric Badges */}
+                      {job.metrics && (
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {job.metrics.map((m, mIdx) => (
+                            <span
+                              key={mIdx}
+                              className="inline-flex items-center text-xs font-mono font-medium px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 shadow-[0_0_12px_rgba(16,185,129,0.2)]"
+                            >
+                              {m}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
                       <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 max-w-2xl">{job.desc}</p>
                       <div className="flex flex-wrap gap-3">
                         {job.stack.map((tag, k) => (
@@ -159,167 +295,102 @@ const ResumeSection = () => {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-8 grid gap-6">
-            {/* Seeker */}
-            <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">01</div>
-                  <div className="flex gap-2">
-                    <a href="https://pathseeker.app" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
-                      Live Demo
-                    </a>
-                    <span className="font-mono text-xs text-blue-400 uppercase tracking-widest border border-blue-500/30 px-3 py-1 rounded-full">Live</span>
+          <div className="lg:col-span-8 flex flex-col gap-6">
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap gap-2 mb-4 border-b border-white/10 pb-4">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-4 py-2 rounded-full font-mono text-xs uppercase tracking-wider transition-all duration-300 ${
+                    activeCategory === cat
+                      ? 'bg-white text-black font-semibold shadow-lg shadow-white/10 scale-105'
+                      : 'bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 border border-white/10'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {/* Filtered Projects Grid */}
+            {projectsData
+              .filter(project => activeCategory === 'All' || project.categories.includes(activeCategory))
+              .map((project) => (
+                <div
+                  key={project.id}
+                  className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden transition-all duration-500"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-t ${project.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                  <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-4 md:mb-6">
+                      <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">
+                        {project.id}
+                      </div>
+                      <div className="flex gap-2 items-center">
+                        {project.demoUrl && (
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
+                          >
+                            Live Demo
+                          </a>
+                        )}
+                        <span className={`font-mono text-xs uppercase tracking-widest border px-3 py-1 rounded-full ${project.badgeColor}`}>
+                          {project.badgeText}
+                        </span>
+                      </div>
+                    </div>
+
+                    {project.demoUrl ? (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`block ${project.hoverTitleColor} transition-colors`}
+                      >
+                        <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">{project.title}</h3>
+                        <p className="text-sm text-gray-500 font-mono mb-4">{project.subtitle}</p>
+                      </a>
+                    ) : (
+                      <div>
+                        <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">{project.title}</h3>
+                        <p className="text-sm text-gray-500 font-mono mb-4">{project.subtitle}</p>
+                      </div>
+                    )}
+
+                    <p className="text-gray-400 leading-relaxed mb-4">{project.description}</p>
+
+                    {/* Metric Badges */}
+                    {project.metricBadges && project.metricBadges.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.metricBadges.map((mb, mbK) => (
+                          <span key={mbK} className={`text-xs font-mono font-medium px-3 py-1 rounded-full border backdrop-blur-md ${mb.color}`}>
+                            {mb.text}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
+                      {project.points.map((pt, ptIdx) => (
+                        <li key={ptIdx}>• {pt}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
+                    {project.stack.map((t, k) => (
+                      <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 </div>
-                <a href="https://pathseeker.app" target="_blank" rel="noopener noreferrer" className="block group-hover:text-blue-400 transition-colors">
-                  <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Seeker</h3>
-                  <p className="text-sm text-gray-500 font-mono mb-4">Interactive Career Exploration Map</p>
-                </a>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  Seeker is a career exploration platform built specifically for Indian students. It gives students an interactive visual map of 25+ career paths organised across six clusters. Career exploration should feel like navigation, not homework.
-                </p>
-                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
-                  <li>• Interactive visual map of 25+ career paths organised across 6 clusters</li>
-                  <li>• Every career is a node on the map you can walk toward</li>
-                  <li>• AI-powered insights using Groq API (LLama 3.3 70B) and semantic search</li>
-                </ul>
-              </div>
-              
-              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
-                {['React', 'Vite', 'Tailwind', 'Node.js', 'Supabase', 'Python'].map((t, k) => (
-                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Nagar Rakshak */}
-            <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">02</div>
-                  <div className="flex gap-2">
-                    <a href="https://nagarrakshakfy.netlify.app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
-                      Live Demo
-                    </a>
-                    <span className="font-mono text-xs text-indigo-400 uppercase tracking-widest border border-indigo-500/30 px-3 py-1 rounded-full">Top 45</span>
-                  </div>
-                </div>
-                <a href="https://nagarrakshakfy.netlify.app/" target="_blank" rel="noopener noreferrer" className="block group-hover:text-indigo-400 transition-colors">
-                  <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Nagar Rakshak</h3>
-                  <p className="text-sm text-gray-500 font-mono mb-4">Top 45 in Internal Smart India Hackathon 2025</p>
-                </a>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  AI-enabled civic complaint system with GPS-based issue reporting, live tracking, and automated severity classification. Built using React (Vite), TypeScript, Supabase, and PostgreSQL.
-                </p>
-                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
-                  <li>• Implemented AI-based issue prioritization and multilingual complaint support</li>
-                  <li>• Integrated real-time updates and community upvoting</li>
-                  <li>• Designed scalable backend with secure auth and structured complaint workflow</li>
-                </ul>
-              </div>
-              
-              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
-                {['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'AI/ML'].map((t, k) => (
-                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Agrasar */}
-            <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">03</div>
-                  <span className="font-mono text-xs text-fuchsia-400 uppercase tracking-widest border border-fuchsia-500/30 px-3 py-1 rounded-full">Top 5</span>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Agrasar</h3>
-                <p className="text-sm text-gray-500 font-mono mb-4">Top 5 in Udhbhav Uttrakhand AI Hackathon (Level 1)</p>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  An integrated digital platform connecting rural citizens with government schemes, grievance systems, and local opportunities.
-                </p>
-                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
-                  <li>• Developed "GramSathi" – multilingual AI chatbot for citizen assistance</li>
-                  <li>• Built modules for scheme discovery, tracking, and grievance redressal</li>
-                  <li>• Designed scalable data architecture for structured public service workflows</li>
-                </ul>
-              </div>
-              
-              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
-                {['Gen-AI', 'Full Stack', 'Cloud', 'Multilingual AI'].map((t, k) => (
-                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Serverless Image Processing System */}
-            <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">04</div>
-                  <span className="font-mono text-xs text-purple-400 uppercase tracking-widest border border-purple-500/30 px-3 py-1 rounded-full">AWS</span>
-                </div>
-                <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Serverless Image Processing System</h3>
-                <p className="text-sm text-gray-500 font-mono mb-4">AWS</p>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  Cloud-native application leveraging AWS Lambda, S3, IAM, and Rekognition for automated image processing.
-                </p>
-                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
-                  <li>• Implemented serverless workflows for resizing, grayscale conversion, object detection, and text extraction</li>
-                  <li>• Enabled S3 versioning and secure IAM role-based access</li>
-                  <li>• Optimized Lambda resource handling for large image processing</li>
-                </ul>
-              </div>
-              
-              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
-                {['AWS Lambda', 'S3', 'Rekognition', 'IAM', 'Serverless'].map((t, k) => (
-                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Crime Lens */}
-            <div className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[300px] md:min-h-[400px] group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              <div className="relative z-10">
-                <div className="flex justify-between items-start mb-4 md:mb-6">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center font-heading text-xl bg-black/50 backdrop-blur-md">05</div>
-                  <div className="flex gap-2">
-                    <a href="https://crimelens-60080209740.development.catalystserverless.in/app/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors">
-                      Live Demo
-                    </a>
-                    <span className="font-mono text-xs text-cyan-400 uppercase tracking-widest border border-cyan-500/30 px-3 py-1 rounded-full">Datathon 2026</span>
-                  </div>
-                </div>
-                <a href="https://crimelens-60080209740.development.catalystserverless.in/app/" target="_blank" rel="noopener noreferrer" className="block group-hover:text-cyan-400 transition-colors">
-                  <h3 className="text-3xl md:text-4xl font-heading font-medium mb-3 leading-tight">Crime Lens</h3>
-                  <p className="text-sm text-gray-500 font-mono mb-4">Agentic AI Investigation Co-Pilot — Karnataka State Police</p>
-                </a>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  Crime Lens is an agentic AI crime-intelligence platform built for Datathon 2026, centered around IRIS, a bilingual (English + Kannada) conversational investigation co-pilot for law enforcement.
-                </p>
-                <ul className="text-gray-400 text-sm leading-relaxed space-y-2 mb-6">
-                  <li>• Architected a multi-agent orchestration layer (Analytics, Graph, Case Intelligence, Prediction, Governance agents) with Python, FastAPI, and the Gemini API</li>
-                  <li>• Built an explainable-AI governance layer generating confidence scores, reasoning trails, and an immutable audit log for every response</li>
-                  <li>• Achieved 0.38s latency at 70.5-99.4% accuracy on vector similarity search, and 0.12s latency for AI fraud-risk verification</li>
-                </ul>
-              </div>
-
-              <div className="relative z-10 border-t border-white/10 pt-6 flex flex-wrap gap-2">
-                {['Python', 'FastAPI', 'Gemini API', 'Multi-Agent Systems', 'Explainable AI'].map((t, k) => (
-                  <span key={k} className="text-xs font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">{t}</span>
-                ))}
-              </div>
-            </div>
+              ))}
           </div>
         </div>
 
