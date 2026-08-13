@@ -121,24 +121,26 @@ const projectsData = [
 const hackathonsData = [
   {
     id: "01",
-    title: "Udbhav 2025 – Emerging Tech AI Hackathon",
-    organizer: "Department of IT, Govt of Uttarakhand & UPES",
+    title: "Udbhav 2025 – AI Hackathon",
+    organizer: "Dept of IT, Govt of Uttarakhand & UPES",
     rank: "🏆 Top 5 Winner",
-    date: "November 14, 2025",
-    description: "Awarded Top 5 in the state-level emerging technology AI hackathon for architecting 'Agrasar' and 'GramSathi'—a bilingual AI public service co-pilot connecting rural citizens with government schemes and grievance systems.",
-    certificateUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
+    date: "Nov 14, 2025",
+    description: "Awarded Top 5 in the state-level emerging technology AI hackathon for building 'Agrasar' and 'GramSathi'—a bilingual AI public service co-pilot.",
+    thumbnailUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
+    fileUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
     badges: ["State Govt Hackathon", "Top 5 Winner", "Bilingual AI"],
     hoverGradient: "from-amber-900/40",
     badgeColor: "text-amber-400 border-amber-500/30"
   },
   {
     id: "02",
-    title: "Smart India Hackathon 2025 (Internal Round)",
-    organizer: "Ministry of Education, MoE's Innovation Cell & AICTE",
-    rank: "🏆 Finalist Team (Top 45)",
-    date: "September 11-12, 2025",
-    description: "Secured finalist position among top teams at UPES for building 'Nagar Rakshak'—an AI civic complaint system with real-time GPS reporting, automated severity classification, and community upvoting.",
-    certificateUrl: "/certificates/hackathon/SIH 25_- Ahmad  Shadan  Taiyabi.pdf",
+    title: "Smart India Hackathon 2025",
+    organizer: "Ministry of Education & AICTE",
+    rank: "🏆 SIH Top 45 Finalist",
+    date: "Sep 11-12, 2025",
+    description: "Selected among top finalist teams in SIH 2025 for engineering 'Nagar Rakshak', an AI civic complaint system with real-time GPS reporting.",
+    thumbnailUrl: "/certificates/thumbnails/SIH 25_- Ahmad  Shadan  Taiyabi.png",
+    fileUrl: "/certificates/hackathon/SIH 25_- Ahmad  Shadan  Taiyabi.pdf",
     badges: ["Ministry of Education", "AICTE", "Top 45 Finalist"],
     hoverGradient: "from-indigo-900/40",
     badgeColor: "text-indigo-400 border-indigo-500/30"
@@ -148,9 +150,10 @@ const hackathonsData = [
     title: "TCS CodeVita Season XII",
     organizer: "Tata Consultancy Services (TCS)",
     rank: "🌐 Global Rank 3,641",
-    date: "Season XII (2024-2025)",
-    description: "Achieved Global Rank 3,641 out of 100,000+ competitive programmers worldwide in the world's largest competitive coding contest organized by TCS.",
-    certificateUrl: "/certificates/hackathon/TCS CodeVita Season 12 Certificate - shadan1221.pdf",
+    date: "2024 - 2025",
+    description: "Achieved Global Rank 3,641 out of 100,000+ competitive programmers worldwide in TCS CodeVita global programming contest.",
+    thumbnailUrl: "/certificates/thumbnails/TCS CodeVita Season 12 Certificate - shadan1221.png",
+    fileUrl: "/certificates/hackathon/TCS CodeVita Season 12 Certificate - shadan1221.pdf",
     badges: ["Global Contest", "Rank 3641", "Algorithms"],
     hoverGradient: "from-cyan-900/40",
     badgeColor: "text-cyan-400 border-cyan-500/30"
@@ -158,11 +161,12 @@ const hackathonsData = [
   {
     id: "04",
     title: "Devcation Delhi 2026",
-    organizer: "Google Developer Groups (GDG) IGDTUW x IIT Delhi",
-    rank: "🚀 Hackathon Participant",
+    organizer: "GDG IGDTUW x IIT Delhi",
+    rank: "🚀 Hackathon Finalist",
     date: "2026",
-    description: "Participated in Devcation Delhi 2026 organized by GDG IGDTUW and IIT Delhi, building cutting-edge web and AI platform solutions.",
-    certificateUrl: "/certificates/hackathon/Devcation 26_ IITD.pdf",
+    description: "Participated in Devcation Delhi 2026 organized by Google Developer Groups IGDTUW and IIT Delhi, building cutting-edge web & AI software.",
+    thumbnailUrl: "/certificates/thumbnails/Devcation 26_ IITD.png",
+    fileUrl: "/certificates/hackathon/Devcation 26_ IITD.pdf",
     badges: ["GDG on Campus", "IIT Delhi", "Full Stack AI"],
     hoverGradient: "from-emerald-900/40",
     badgeColor: "text-emerald-400 border-emerald-500/30"
@@ -171,10 +175,11 @@ const hackathonsData = [
     id: "05",
     title: "#ImagineThat Idea Pitch",
     organizer: "Tata Group",
-    rank: "💡 Certificate of Appreciation",
+    rank: "💡 Appreciation Award",
     date: "2025",
-    description: "Earned Certificate of Appreciation for pitching innovative technological concepts in the Tata Group #ImagineThat national idea pitch.",
-    certificateUrl: "/certificates/hackathon/Certificate of Appreciation- Tata  Group.pdf",
+    description: "Earned Certificate of Appreciation for pitching innovative technological concepts in the Tata Group national idea pitch.",
+    thumbnailUrl: "/certificates/thumbnails/Certificate of Appreciation- Tata  Group.png",
+    fileUrl: "/certificates/hackathon/Certificate of Appreciation- Tata  Group.pdf",
     badges: ["Tata Group", "Corporate Pitch", "Innovation"],
     hoverGradient: "from-blue-900/40",
     badgeColor: "text-blue-400 border-blue-500/30"
@@ -184,9 +189,10 @@ const hackathonsData = [
     title: "Adobe India Hackathon",
     organizer: "Adobe & Unstop",
     rank: "🎯 Round 1 Qualifier",
-    date: "2024-2025",
+    date: "2024 - 2025",
     description: "Qualified Round 1 Online MCQ Assessment + Coding challenge in Adobe India national hackathon.",
-    certificateUrl: "/certificates/hackathon/adobe hackathon.pdf",
+    thumbnailUrl: "/certificates/thumbnails/adobe hackathon.png",
+    fileUrl: "/certificates/hackathon/adobe hackathon.pdf",
     badges: ["Adobe", "Competitive Coding", "Unstop"],
     hoverGradient: "from-rose-900/40",
     badgeColor: "text-rose-400 border-rose-500/30"
@@ -194,11 +200,12 @@ const hackathonsData = [
   {
     id: "07",
     title: "Code Clash – IGDTUW",
-    organizer: "Indira Gandhi Delhi Technical University for Women (IGDTUW)",
+    organizer: "IGDTUW & Unstop",
     rank: "💻 Hackathon Participant",
     date: "2025",
     description: "Participated in Code Clash competitive programming hackathon hosted by IGDTUW and Unstop.",
-    certificateUrl: "/certificates/hackathon/code-clash-igdtuw.pdf",
+    thumbnailUrl: "/certificates/thumbnails/code-clash-igdtuw.png",
+    fileUrl: "/certificates/hackathon/code-clash-igdtuw.pdf",
     badges: ["IGDTUW", "Code Clash", "Unstop"],
     hoverGradient: "from-purple-900/40",
     badgeColor: "text-purple-400 border-purple-500/30"
@@ -208,12 +215,12 @@ const hackathonsData = [
 const certificationsData = [
   {
     id: "01",
-    title: "AWS Academy Graduate – Cloud Architecting",
+    title: "AWS Graduate – Cloud Architecting",
     issuer: "Amazon Web Services (AWS Academy)",
-    date: "Issued Nov 24, 2025",
-    hours: "60 Hours Intensive Curriculum",
-    description: "Advanced training covering AWS multi-tier architecture, high availability, fault tolerance, VPC network design, IAM security policies, and cost optimization.",
-    certificateUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.pdf",
+    date: "Nov 24, 2025 • 60 Hours",
+    description: "Advanced AWS multi-tier architecture, VPC networking, IAM security policies, high availability, and cost optimization.",
+    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.png",
+    fileUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.pdf",
     credlyUrl: "https://www.credly.com/go/XTEi9VXt",
     badges: ["AWS Cloud Architecting", "60 Hours", "Credly Verified"],
     hoverGradient: "from-purple-900/40",
@@ -221,12 +228,12 @@ const certificationsData = [
   },
   {
     id: "02",
-    title: "AWS Academy Graduate – Cloud Operations",
+    title: "AWS Graduate – Cloud Operations",
     issuer: "Amazon Web Services (AWS Academy)",
-    date: "Issued Nov 24, 2025",
-    hours: "40 Hours SysOps & DevOps Curriculum",
-    description: "Specialized coursework focusing on AWS Cloud Operations, system administration, automated resource provisioning, CloudWatch monitoring, and security compliance.",
-    certificateUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.pdf",
+    date: "Nov 24, 2025 • 40 Hours",
+    description: "Specialized AWS Cloud Operations, SysOps administration, automated resource provisioning, CloudWatch monitoring, and compliance.",
+    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.png",
+    fileUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.pdf",
     credlyUrl: "https://www.credly.com/go/6tbfOKoi",
     badges: ["AWS Cloud Operations", "40 Hours", "Credly Verified"],
     hoverGradient: "from-indigo-900/40",
@@ -234,12 +241,12 @@ const certificationsData = [
   },
   {
     id: "03",
-    title: "AWS Academy Graduate – Cloud Foundations",
+    title: "AWS Graduate – Cloud Foundations",
     issuer: "Amazon Web Services (AWS Academy)",
-    date: "Issued Apr 26, 2025",
-    hours: "20 Hours Core Infrastructure",
-    description: "Comprehensive foundation in AWS cloud computing concepts, core infrastructure services (EC2, S3, RDS, Lambda), cloud security, and pricing models.",
-    certificateUrl: "/certificates/certifications/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.pdf",
+    date: "Apr 26, 2025 • 20 Hours",
+    description: "Core AWS cloud infrastructure, EC2, S3, RDS, Lambda serverless workflows, cloud security, and IAM role management.",
+    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.png",
+    fileUrl: "/certificates/certifications/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.pdf",
     credlyUrl: "https://www.credly.com/go/6Xi5kR50",
     badges: ["AWS Cloud Foundations", "20 Hours", "Credly Verified"],
     hoverGradient: "from-blue-900/40",
@@ -249,10 +256,10 @@ const certificationsData = [
     id: "04",
     title: "AI Fluency: Framework & Foundations",
     issuer: "Anthropic Academy",
-    date: "Issued 2025-2026",
-    hours: "LLM Foundations & Prompt Engineering",
-    description: "Certified by Anthropic Academy on AI fluency frameworks, LLM architecture principles, prompt engineering, agentic workflow design, and ethical AI deployment.",
-    certificateUrl: "/certificates/certifications/Anthropic Academy- AI Fluency Framework & Foundations.pdf",
+    date: "2025 - 2026",
+    description: "Certified by Anthropic Academy on AI fluency frameworks, LLM architecture principles, prompt engineering, and agentic workflows.",
+    thumbnailUrl: "/certificates/thumbnails/Anthropic Academy- AI Fluency Framework & Foundations.png",
+    fileUrl: "/certificates/certifications/Anthropic Academy- AI Fluency Framework & Foundations.pdf",
     credlyUrl: null,
     badges: ["Anthropic AI", "AI Fluency", "LLM Frameworks"],
     hoverGradient: "from-emerald-900/40",
@@ -262,6 +269,7 @@ const certificationsData = [
 
 const ResumeSection = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
+  const [modalItem, setModalItem] = useState<{ title: string; imageSrc: string; fileUrl: string } | null>(null);
   const categories = ['All', 'Agentic AI / LLMs', 'Cloud & Systems', 'Hackathons'];
 
   return (
@@ -536,138 +544,148 @@ const ResumeSection = () => {
           </div>
         </div>
 
-        {/* SECTION: HACKATHONS & COMPETITIONS */}
-        <div id="hackathons" className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 mb-16 md:mb-32 scroll-mt-24">
-          <div className="lg:col-span-4 lg:sticky lg:top-32 self-start">
-             <Reveal>
-              <h2 className="text-[10vw] lg:text-[6rem] font-heading font-bold tracking-tighter leading-[0.8] mb-4 text-white/80 hover:text-white transition-colors duration-700">
-                <TextScramble text="HONORS" />
+        {/* SECTION: HACKATHONS & HONORS (3-Column Card Grid) */}
+        <div id="hackathons" className="mb-16 md:mb-32 scroll-mt-24">
+          <Reveal>
+            <div className="flex flex-col items-center text-center mb-12">
+              <h2 className="text-3xl md:text-6xl font-heading font-bold tracking-tight text-white mb-4">
+                Hackathons & Honors
               </h2>
-              <p className="font-mono text-xs tracking-widest text-gray-500 uppercase mt-8">
-                {'// Competitive_Records'}
+              <p className="text-sm md:text-lg font-mono text-gray-400 max-w-2xl">
+                National-level hackathons, research achievements, and competition awards.
               </p>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
-          <div className="lg:col-span-8 flex flex-col gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {hackathonsData.map((item) => (
               <div
                 key={item.id}
-                className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[250px] group relative overflow-hidden transition-all duration-500 hover:border-white/30"
+                className="glass-panel rounded-3xl p-5 md:p-6 flex flex-col justify-between group hover:border-white/40 transition-all duration-500 relative overflow-hidden"
               >
                 <div className={`absolute inset-0 bg-gradient-to-t ${item.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-                <div className="relative z-10">
-                  <div className="flex flex-wrap justify-between items-start mb-4 gap-3">
-                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-heading text-lg bg-black/50 backdrop-blur-md">
-                      {item.id}
-                    </div>
-                    <div className="flex flex-wrap gap-2 items-center">
-                      <span className={`font-mono text-xs uppercase tracking-widest border px-3 py-1 rounded-full ${item.badgeColor}`}>
+                <div className="relative z-10 flex flex-col h-full justify-between">
+                  <div>
+                    {/* Thumbnail Image Container */}
+                    <div className="w-full aspect-[16/10] rounded-2xl bg-black/60 border border-white/10 overflow-hidden mb-5 relative group-hover:border-white/30 transition-colors">
+                      <img
+                        src={item.thumbnailUrl}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <span className={`absolute top-3 right-3 font-mono text-[10px] uppercase tracking-widest border px-3 py-1 rounded-full bg-black/70 backdrop-blur-md ${item.badgeColor}`}>
                         {item.rank}
                       </span>
-                      {item.certificateUrl && (
-                        <a
-                          href={item.certificateUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
-                        >
-                          View Certificate ↗
-                        </a>
-                      )}
                     </div>
+
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-white mb-2 leading-snug group-hover:text-cyan-300 transition-colors">
+                      {item.title}
+                    </h3>
+                    
+                    <p className="text-xs font-mono text-cyan-400 mb-2">
+                      {item.organizer} • {item.date}
+                    </p>
+
+                    <p className="text-xs text-gray-400 leading-relaxed mb-6 line-clamp-3">
+                      {item.description}
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-heading font-medium mb-1 leading-tight text-white">{item.title}</h3>
-                  <div className="flex flex-wrap gap-4 text-xs text-gray-400 font-mono mb-3">
-                    <span className="text-indigo-300">{item.organizer}</span>
-                    <span>• {item.date}</span>
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => setModalItem({ title: item.title, imageSrc: item.thumbnailUrl, fileUrl: item.fileUrl })}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-400 hover:text-black transition-all"
+                    >
+                      <span>Preview Certificate</span>
+                    </button>
+                    <a
+                      href={item.fileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-mono text-gray-400 hover:text-white transition-colors"
+                    >
+                      ↗
+                    </a>
                   </div>
-
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
-                </div>
-
-                <div className="relative z-10 border-t border-white/10 pt-4 flex flex-wrap gap-2">
-                  {item.badges.map((b, k) => (
-                    <span key={k} className="text-xs font-mono font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">
-                      {b}
-                    </span>
-                  ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* SECTION: CERTIFICATIONS */}
-        <div id="certifications" className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 mb-16 md:mb-32 scroll-mt-24">
-          <div className="lg:col-span-4 lg:sticky lg:top-32 self-start">
-             <Reveal>
-              <h2 className="text-[10vw] lg:text-[5rem] font-heading font-bold tracking-tighter leading-[0.8] mb-4 text-white/80 hover:text-white transition-colors duration-700">
-                <TextScramble text="CREDENTIALS" />
+        {/* SECTION: CERTIFICATIONS & CREDENTIALS (3-Column Card Grid) */}
+        <div id="certifications" className="mb-16 md:mb-32 scroll-mt-24">
+          <Reveal>
+            <div className="flex flex-col items-center text-center mb-12">
+              <h2 className="text-3xl md:text-6xl font-heading font-bold tracking-tight text-white mb-4">
+                Certifications & Credentials
               </h2>
-              <p className="font-mono text-xs tracking-widest text-gray-500 uppercase mt-8">
-                {'// Verified_Certificates'}
+              <p className="text-sm md:text-lg font-mono text-gray-400 max-w-2xl">
+                Official industry certificates with live image previews and online verification badges.
               </p>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
-          <div className="lg:col-span-8 flex flex-col gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {certificationsData.map((cert) => (
               <div
                 key={cert.id}
-                className="glass-panel rounded-[2rem] p-6 md:p-10 flex flex-col justify-between min-h-[250px] group relative overflow-hidden transition-all duration-500 hover:border-white/30"
+                className="glass-panel rounded-3xl p-5 md:p-6 flex flex-col justify-between group hover:border-white/40 transition-all duration-500 relative overflow-hidden"
               >
                 <div className={`absolute inset-0 bg-gradient-to-t ${cert.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-                <div className="relative z-10">
-                  <div className="flex flex-wrap justify-between items-start mb-4 gap-3">
-                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-heading text-lg bg-black/50 backdrop-blur-md">
-                      {cert.id}
+                <div className="relative z-10 flex flex-col h-full justify-between">
+                  <div>
+                    {/* Thumbnail Image Container */}
+                    <div className="w-full aspect-[16/10] rounded-2xl bg-black/60 border border-white/10 overflow-hidden mb-5 relative group-hover:border-white/30 transition-colors">
+                      <img
+                        src={cert.thumbnailUrl}
+                        alt={cert.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
-                    <div className="flex flex-wrap gap-2 items-center">
-                      <span className={`font-mono text-xs uppercase tracking-widest border px-3 py-1 rounded-full ${cert.badgeColor}`}>
-                        {cert.hours}
-                      </span>
-                      {cert.credlyUrl && (
-                        <a
-                          href={cert.credlyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-mono text-xs text-amber-300 uppercase tracking-widest border border-amber-500/30 px-3 py-1 rounded-full hover:bg-amber-400 hover:text-black transition-colors"
-                        >
-                          Verify Credly ↗
-                        </a>
-                      )}
-                      {cert.certificateUrl && (
-                        <a
-                          href={cert.certificateUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
-                        >
-                          View Certificate ↗
-                        </a>
-                      )}
-                    </div>
+
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-white mb-2 leading-snug group-hover:text-emerald-300 transition-colors">
+                      {cert.title}
+                    </h3>
+                    
+                    <p className="text-xs font-mono text-emerald-400 mb-2">
+                      {cert.issuer} • {cert.date}
+                    </p>
+
+                    <p className="text-xs text-gray-400 leading-relaxed mb-6 line-clamp-3">
+                      {cert.description}
+                    </p>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-heading font-medium mb-1 leading-tight text-white">{cert.title}</h3>
-                  <div className="flex flex-wrap gap-4 text-xs text-gray-400 font-mono mb-3">
-                    <span className="text-indigo-300">{cert.issuer}</span>
-                    <span>• {cert.date}</span>
+                  <div className="pt-4 border-t border-white/10 flex items-center gap-2 flex-wrap">
+                    {cert.credlyUrl ? (
+                      <a
+                        href={cert.credlyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-400 hover:text-black transition-all"
+                      >
+                        <span>Verify Credly</span> ↗
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => setModalItem({ title: cert.title, imageSrc: cert.thumbnailUrl, fileUrl: cert.fileUrl })}
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-400 hover:text-black transition-all"
+                      >
+                        <span>Preview Certificate</span>
+                      </button>
+                    )}
+                    <a
+                      href={cert.fileUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-3 py-2 rounded-full text-xs font-mono text-gray-300 bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-all"
+                    >
+                      <span>PDF</span> ↗
+                    </a>
                   </div>
-
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">{cert.description}</p>
-                </div>
-
-                <div className="relative z-10 border-t border-white/10 pt-4 flex flex-wrap gap-2">
-                  {cert.badges.map((b, k) => (
-                    <span key={k} className="text-xs font-mono font-medium text-gray-300 bg-white/5 px-3 py-1 rounded-md">
-                      {b}
-                    </span>
-                  ))}
                 </div>
               </div>
             ))}
@@ -730,6 +748,54 @@ const ResumeSection = () => {
         </footer>
 
       </section>
+
+      {/* CERTIFICATE PREVIEW MODAL */}
+      {modalItem && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn"
+          onClick={() => setModalItem(null)}
+        >
+          <div
+            className="glass-panel border border-white/20 rounded-3xl p-6 max-w-4xl w-full flex flex-col gap-4 relative overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center border-b border-white/10 pb-4">
+              <h3 className="text-xl font-heading font-bold text-white">{modalItem.title}</h3>
+              <button
+                onClick={() => setModalItem(null)}
+                className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="w-full max-h-[70vh] overflow-auto rounded-2xl border border-white/10 bg-black/70 flex items-center justify-center p-2">
+              <img
+                src={modalItem.imageSrc}
+                alt={modalItem.title}
+                className="max-w-full max-h-[65vh] object-contain rounded-lg"
+              />
+            </div>
+
+            <div className="flex justify-end gap-3 pt-2 border-t border-white/10">
+              <a
+                href={modalItem.fileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2.5 rounded-full font-mono text-xs font-medium bg-white text-black hover:bg-gray-200 transition-colors uppercase tracking-wider"
+              >
+                Open Full File ↗
+              </a>
+              <button
+                onClick={() => setModalItem(null)}
+                className="px-6 py-2.5 rounded-full font-mono text-xs font-medium border border-white/20 text-white hover:bg-white/10 transition-colors uppercase tracking-wider"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
