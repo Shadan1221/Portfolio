@@ -152,7 +152,7 @@ const certificationsData = [
     description: "Official Oracle Cloud Infrastructure certification covering Artificial Intelligence concepts, LLM architectures, Generative AI services, Machine Learning workflows, and Responsible AI guidelines.",
     thumbnailUrl: "/certificates/thumbnails/oracle_oci_ai.png",
     fileUrl: "/certificates/certifications/eCertificate Oracle Cloud Infrastructure AI Foundations Associate (1Z0-1122-26).pdf",
-    credlyUrl: null,
+    credlyUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B80B0592ED333E763B441168A19F02DB7080C846717BE3098648C4423D4042D2",
     badges: [
       { text: "Oracle Certified", icon: IconAward },
       { text: "OCI AI Foundations", icon: IconCpu },
@@ -747,11 +747,22 @@ const ResumeSection = () => {
                   </div>
 
                   <div className="pt-4 border-t border-white/10 flex items-center gap-2 flex-wrap">
+                    {cert.credlyUrl && (
+                      <a
+                        href={cert.credlyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-rose-400 bg-rose-500/10 border border-rose-500/30 hover:bg-rose-400 hover:text-black transition-all"
+                      >
+                        <span>Verify Badge</span>
+                        <IconExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
                     <button
                       onClick={() => setModalItem({ title: cert.title, imageSrc: cert.thumbnailUrl, fileUrl: cert.fileUrl })}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-rose-400 bg-rose-500/10 border border-rose-500/30 hover:bg-rose-400 hover:text-black transition-all"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-gray-300 bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-all"
                     >
-                      <span>Preview Certificate</span>
+                      <span>Preview</span>
                     </button>
                     <a
                       href={cert.fileUrl}
