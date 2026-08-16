@@ -25,7 +25,10 @@ import {
   IconExternalLink,
   IconX,
   IconCheck,
-  IconCpu
+  IconCpu,
+  IconMail,
+  IconBrandLinkedin,
+  IconBrandGithub
 } from '@tabler/icons-react';
 
 const projectsData = [
@@ -1007,16 +1010,26 @@ const ResumeSection = () => {
               </a>
             </div>
 
-            <div className="mt-16 md:mt-24 flex gap-6 md:gap-8">
+            <div className="mt-16 md:mt-24 flex flex-wrap justify-center gap-4 md:gap-6 z-20">
                {[
-                 { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ahmad-shadan-taiyabi-4697a4253/' },
-                 { name: 'GitHub', url: 'https://github.com/Shadan1221' },
-                 { name: 'Gmail', url: 'mailto:shadantaiyabi@gmail.com' }
-               ].map((social, i) => (
-                 <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="text-sm font-mono uppercase tracking-widest text-gray-600 hover:text-white transition-colors">
-                   {social.name}
-                 </a>
-               ))}
+                 { name: 'LinkedIn', icon: IconBrandLinkedin, url: 'https://www.linkedin.com/in/ahmad-shadan-taiyabi-4697a4253/' },
+                 { name: 'GitHub', icon: IconBrandGithub, url: 'https://github.com/Shadan1221' },
+                 { name: 'Gmail', icon: IconMail, url: 'mailto:shadantaiyabi@gmail.com' }
+               ].map((social, i) => {
+                 const IconComp = social.icon;
+                 return (
+                   <a
+                     key={i}
+                     href={social.url}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs md:text-sm font-mono uppercase tracking-widest text-white bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white hover:text-black hover:scale-105 transition-all shadow-lg shadow-black/40"
+                   >
+                     {IconComp && <IconComp className="w-4 h-4 shrink-0" />}
+                     <span>{social.name}</span>
+                   </a>
+                 );
+               })}
             </div>
           </div>
         </footer>
