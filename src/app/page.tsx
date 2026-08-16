@@ -92,12 +92,15 @@ const navItems = [
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
   React.useEffect(() => {
-    // Defer heavy components until after initial paint
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+    // Immediate initial paint
+    setIsLoaded(true);
+    // Defer heavy 3D spline scene download so initial page loads instantly
+    const timer = setTimeout(() => setIsSplineLoaded(true), 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -163,7 +166,7 @@ export default function Home() {
         </div>
         
         {/* Spline Robot - Right Side - Global Position - Deferred */}
-        {isLoaded && (
+        {isSplineLoaded && (
           <div className="absolute bottom-0 right-0 z-40 pointer-events-none flex items-end justify-end pr-2 pb-2 md:pr-12 md:pb-12">
              {/* Glow Effect */}
              <div className="hidden md:block absolute inset-0 bg-indigo-500/10 blur-[60px] rounded-full transform translate-y-10 translate-x-10"></div>

@@ -153,7 +153,7 @@ const certificationsData = [
     issuer: "Oracle Corporation (Oracle University)",
     date: "Aug 16, 2026 • Credential ID: 330662602OCI26AICFA",
     description: "Official Oracle Cloud Infrastructure certification covering Artificial Intelligence concepts, LLM architectures, Generative AI services, Machine Learning workflows, and Responsible AI guidelines.",
-    thumbnailUrl: "/certificates/thumbnails/oracle_oci_ai.png",
+    thumbnailUrl: "/certificates/thumbnails/oracle_oci_ai.webp",
     fileUrl: "/certificates/certifications/eCertificate Oracle Cloud Infrastructure AI Foundations Associate (1Z0-1122-26).pdf",
     credlyUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B80B0592ED333E763B441168A19F02DB7080C846717BE3098648C4423D4042D2",
     badges: [
@@ -176,8 +176,8 @@ const hackathonsData = [
     rankIcon: IconTrophy,
     date: "Nov 14, 2025",
     description: "Awarded Top 5 in the state-level emerging technology AI hackathon for building 'Agrasar' and 'GramSathi'—a bilingual AI public service co-pilot.",
-    thumbnailUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
-    fileUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
+    thumbnailUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.webp",
+    fileUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.webp",
     badges: [
       { text: "State Govt Hackathon", icon: IconAward },
       { text: "Top 5 Winner", icon: IconTrophy },
@@ -194,7 +194,7 @@ const hackathonsData = [
     rankIcon: IconTrophy,
     date: "Sep 11-12, 2025",
     description: "Selected among top finalist teams in SIH 2025 for engineering 'Nagar Rakshak', an AI civic complaint system with real-time GPS reporting.",
-    thumbnailUrl: "/certificates/thumbnails/SIH 25_- Ahmad  Shadan  Taiyabi.png",
+    thumbnailUrl: "/certificates/thumbnails/SIH 25_- Ahmad  Shadan  Taiyabi.webp",
     fileUrl: "/certificates/hackathon/SIH 25_- Ahmad  Shadan  Taiyabi.pdf",
     badges: [
       { text: "Ministry of Education", icon: IconAward },
@@ -212,7 +212,7 @@ const hackathonsData = [
     rankIcon: IconGlobe,
     date: "2024 - 2025",
     description: "Achieved Global Rank 3,641 out of 100,000+ competitive programmers worldwide in TCS CodeVita global programming contest.",
-    thumbnailUrl: "/certificates/thumbnails/TCS CodeVita Season 12 Certificate - shadan1221.png",
+    thumbnailUrl: "/certificates/thumbnails/TCS CodeVita Season 12 Certificate - shadan1221.webp",
     fileUrl: "/certificates/hackathon/TCS CodeVita Season 12 Certificate - shadan1221.pdf",
     badges: [
       { text: "Global Contest", icon: IconGlobe },
@@ -230,7 +230,7 @@ const hackathonsData = [
     rankIcon: IconRocket,
     date: "2026",
     description: "Participated in Devcation Delhi 2026 organized by Google Developer Groups IGDTUW and IIT Delhi, building cutting-edge web & AI software.",
-    thumbnailUrl: "/certificates/thumbnails/Devcation 26_ IITD.png",
+    thumbnailUrl: "/certificates/thumbnails/Devcation 26_ IITD.webp",
     fileUrl: "/certificates/hackathon/Devcation 26_ IITD.pdf",
     badges: [
       { text: "GDG on Campus", icon: IconRocket },
@@ -248,7 +248,7 @@ const hackathonsData = [
     rankIcon: IconBulb,
     date: "2025",
     description: "Earned Certificate of Appreciation for pitching innovative technological concepts in the Tata Group national idea pitch.",
-    thumbnailUrl: "/certificates/thumbnails/Certificate of Appreciation- Tata  Group.png",
+    thumbnailUrl: "/certificates/thumbnails/Certificate of Appreciation- Tata  Group.webp",
     fileUrl: "/certificates/hackathon/Certificate of Appreciation- Tata  Group.pdf",
     badges: [
       { text: "Tata Group", icon: IconAward },
@@ -266,7 +266,7 @@ const hackathonsData = [
     rankIcon: IconTarget,
     date: "2024 - 2025",
     description: "Qualified Round 1 Online MCQ Assessment + Coding challenge in Adobe India national hackathon.",
-    thumbnailUrl: "/certificates/thumbnails/adobe hackathon.png",
+    thumbnailUrl: "/certificates/thumbnails/adobe hackathon.webp",
     fileUrl: "/certificates/hackathon/adobe hackathon.pdf",
     badges: [
       { text: "Adobe", icon: IconTarget },
@@ -284,7 +284,7 @@ const hackathonsData = [
     rankIcon: IconCode,
     date: "2025",
     description: "Participated in Code Clash competitive programming hackathon hosted by IGDTUW and Unstop.",
-    thumbnailUrl: "/certificates/thumbnails/code-clash-igdtuw.png",
+    thumbnailUrl: "/certificates/thumbnails/code-clash-igdtuw.webp",
     fileUrl: "/certificates/hackathon/code-clash-igdtuw.pdf",
     badges: [
       { text: "IGDTUW", icon: IconAward },
@@ -304,7 +304,7 @@ const certificatesData = [
     issuer: "Amazon Web Services (AWS Academy)",
     date: "Nov 24, 2025 • 60 Hours",
     description: "Advanced AWS multi-tier architecture, VPC networking, IAM security policies, high availability, and cost optimization.",
-    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.png",
+    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.webp",
     fileUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.pdf",
     credlyUrl: "https://www.credly.com/go/XTEi9VXt",
     badges: [
@@ -321,7 +321,7 @@ const certificatesData = [
     issuer: "Amazon Web Services (AWS Academy)",
     date: "Nov 24, 2025 • 40 Hours",
     description: "Specialized AWS Cloud Operations, SysOps administration, automated resource provisioning, CloudWatch monitoring, and compliance.",
-    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.png",
+    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.webp",
     fileUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.pdf",
     credlyUrl: "https://www.credly.com/go/6tbfOKoi",
     badges: [
@@ -338,7 +338,7 @@ const certificatesData = [
     issuer: "Amazon Web Services (AWS Academy)",
     date: "Apr 26, 2025 • 20 Hours",
     description: "Core AWS cloud infrastructure, EC2, S3, RDS, Lambda serverless workflows, cloud security, and IAM role management.",
-    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.png",
+    thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.webp",
     fileUrl: "/certificates/certifications/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.pdf",
     credlyUrl: "https://www.credly.com/go/6Xi5kR50",
     badges: [
@@ -355,7 +355,7 @@ const certificatesData = [
     issuer: "Anthropic Academy (Claude)",
     date: "2025 - 2026",
     description: "Certified by Anthropic Academy on AI fluency frameworks, Claude LLM architecture principles, prompt engineering, and agentic workflows.",
-    thumbnailUrl: "/certificates/thumbnails/Anthropic Academy- AI Fluency Framework & Foundations.png",
+    thumbnailUrl: "/certificates/thumbnails/Anthropic Academy- AI Fluency Framework & Foundations.webp",
     fileUrl: "/certificates/certifications/Anthropic Academy- AI Fluency Framework & Foundations.pdf",
     credlyUrl: null,
     badges: [
@@ -372,7 +372,7 @@ const certificatesData = [
     issuer: "TCS iON x MPIT – CoE & TCS Foundation",
     date: "July 2026 • Certificate ID: 8772-28783311-1016",
     description: "Course completion under the 'AI for All' national initiative, mastering Generative AI principles, transformer architectures, prompt engineering, and real-world AI applications.",
-    thumbnailUrl: "/certificates/thumbnails/tcs_58908.png",
+    thumbnailUrl: "/certificates/thumbnails/tcs_58908.webp",
     fileUrl: "/certificates/certificates/Ahmad_Taiyabi_58908.pdf",
     credlyUrl: null,
     badges: [
@@ -389,7 +389,7 @@ const certificatesData = [
     issuer: "TCS iON x MPIT – CoE & TCS Foundation",
     date: "July 2026 • Certificate ID: 8770-28783311-1016",
     description: "Course completion under the Guinness World Record enrolled 'AI for All' program, covering AI risk management, cyber threat detection, and secure system architectures.",
-    thumbnailUrl: "/certificates/thumbnails/tcs_58907.png",
+    thumbnailUrl: "/certificates/thumbnails/tcs_58907.webp",
     fileUrl: "/certificates/certificates/Ahmad_Taiyabi_58907.pdf",
     credlyUrl: null,
     badges: [
