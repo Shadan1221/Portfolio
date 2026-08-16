@@ -693,7 +693,7 @@ const ResumeSection = () => {
                 Certifications
               </h2>
               <p className="text-sm md:text-lg font-mono text-gray-400 max-w-2xl">
-                Official industry certification from Oracle Corporation.
+                Official industry certifications and professional credentials.
               </p>
             </div>
           </Reveal>
