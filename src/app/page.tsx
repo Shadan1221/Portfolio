@@ -32,6 +32,7 @@ import {
   IconRocket,
   IconTrophy,
   IconAward,
+  IconCertificate,
   IconCpu,
 } from '@tabler/icons-react';
 
@@ -57,14 +58,19 @@ const navItems = [
     href: "#projects",
   },
   {
+    title: "Certifications",
+    icon: <IconAward className="h-full w-full text-neutral-300" />,
+    href: "#certifications",
+  },
+  {
     title: "Hackathons",
     icon: <IconTrophy className="h-full w-full text-neutral-300" />,
     href: "#hackathons",
   },
   {
-    title: "Certifications",
-    icon: <IconAward className="h-full w-full text-neutral-300" />,
-    href: "#certifications",
+    title: "Course Certificates",
+    icon: <IconCertificate className="h-full w-full text-neutral-300" />,
+    href: "#certificates",
   },
   {
     title: "Skills",

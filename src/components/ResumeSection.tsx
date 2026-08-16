@@ -3,6 +3,30 @@ import { Reveal } from '@/components/ui/Reveal';
 import SpaceBackground from '@/components/ui/SpaceBackground';
 import TextScramble from '@/components/ui/TextScramble';
 import MagneticButton from '@/components/ui/MagneticButton';
+import {
+  IconBolt,
+  IconRoute,
+  IconMapPin,
+  IconTrophy,
+  IconAward,
+  IconShieldCheck,
+  IconCloud,
+  IconEye,
+  IconRobot,
+  IconSparkles,
+  IconBrain,
+  IconGlobe,
+  IconRocket,
+  IconBulb,
+  IconTarget,
+  IconCode,
+  IconMicrophone,
+  IconCertificate,
+  IconExternalLink,
+  IconX,
+  IconCheck,
+  IconCpu
+} from '@tabler/icons-react';
 
 const projectsData = [
   {
@@ -22,8 +46,8 @@ const projectsData = [
       "AI-powered insights using Groq API (LLama 3.3 70B) and semantic search"
     ],
     metricBadges: [
-      { text: "⚡ LLaMA 3.3 70B", color: "bg-blue-500/10 text-blue-300 border-blue-500/20" },
-      { text: "🗺️ 25+ Career Clusters", color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20" }
+      { text: "LLaMA 3.3 70B", icon: IconBolt, color: "bg-blue-500/10 text-blue-300 border-blue-500/20" },
+      { text: "25+ Career Clusters", icon: IconRoute, color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20" }
     ],
     stack: ['React', 'Vite', 'Tailwind', 'Node.js', 'Supabase', 'Python']
   },
@@ -44,8 +68,8 @@ const projectsData = [
       "Designed scalable backend with secure auth and structured complaint workflow"
     ],
     metricBadges: [
-      { text: "🏆 SIH 2025 Top 45", color: "bg-amber-500/10 text-amber-300 border-amber-500/20" },
-      { text: "📍 Real-Time GPS Tracking", color: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20" }
+      { text: "SIH 2025 Top 45", icon: IconTrophy, color: "bg-amber-500/10 text-amber-300 border-amber-500/20" },
+      { text: "Real-Time GPS Tracking", icon: IconMapPin, color: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20" }
     ],
     stack: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'AI/ML']
   },
@@ -66,8 +90,8 @@ const projectsData = [
       "Designed scalable data architecture for structured public service workflows"
     ],
     metricBadges: [
-      { text: "🏆 Top 5 AI Hackathon", color: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20" },
-      { text: "🤖 GramSathi Multilingual AI", color: "bg-pink-500/10 text-pink-300 border-pink-500/20" }
+      { text: "Top 5 AI Hackathon", icon: IconTrophy, color: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20" },
+      { text: "GramSathi Multilingual AI", icon: IconRobot, color: "bg-pink-500/10 text-pink-300 border-pink-500/20" }
     ],
     stack: ['Gen-AI', 'Full Stack', 'Cloud', 'Multilingual AI']
   },
@@ -88,8 +112,8 @@ const projectsData = [
       "Optimized Lambda resource handling for large image processing"
     ],
     metricBadges: [
-      { text: "☁️ AWS Serverless", color: "bg-purple-500/10 text-purple-300 border-purple-500/20" },
-      { text: "👁️ Rekognition Automation", color: "bg-violet-500/10 text-violet-300 border-violet-500/20" }
+      { text: "AWS Serverless", icon: IconCloud, color: "bg-purple-500/10 text-purple-300 border-purple-500/20" },
+      { text: "Rekognition Automation", icon: IconEye, color: "bg-violet-500/10 text-violet-300 border-violet-500/20" }
     ],
     stack: ['AWS Lambda', 'S3', 'Rekognition', 'IAM', 'Serverless']
   },
@@ -110,25 +134,52 @@ const projectsData = [
       "Achieved 0.38s latency at 70.5-99.4% accuracy on vector similarity search, and 0.12s latency for AI fraud-risk verification"
     ],
     metricBadges: [
-      { text: "⚡ 0.38s Vector Latency", color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20" },
-      { text: "🛡️ Explainable AI Governance", color: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20" },
-      { text: "⚡ 0.12s Fraud Risk Verification", color: "bg-teal-500/10 text-teal-300 border-teal-500/20" }
+      { text: "0.38s Vector Latency", icon: IconBolt, color: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20" },
+      { text: "Explainable AI Governance", icon: IconShieldCheck, color: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20" },
+      { text: "0.12s Fraud Risk Verification", icon: IconBolt, color: "bg-teal-500/10 text-teal-300 border-teal-500/20" }
     ],
     stack: ['Python', 'FastAPI', 'Gemini API', 'Multi-Agent Systems', 'Explainable AI']
   }
 ];
 
+// SECTION 1: Certifications (Only Oracle Certification)
+const certificationsData = [
+  {
+    id: "01",
+    title: "Oracle Certified Foundations Associate – OCI AI",
+    issuer: "Oracle Corporation (Oracle University)",
+    date: "Aug 16, 2026 • Credential ID: 330662602OCI26AICFA",
+    description: "Official Oracle Cloud Infrastructure certification covering Artificial Intelligence concepts, LLM architectures, Generative AI services, Machine Learning workflows, and Responsible AI guidelines.",
+    thumbnailUrl: "/certificates/thumbnails/oracle_oci_ai.png",
+    fileUrl: "/certificates/certifications/eCertificate Oracle Cloud Infrastructure AI Foundations Associate (1Z0-1122-26).pdf",
+    credlyUrl: null,
+    badges: [
+      { text: "Oracle Certified", icon: IconAward },
+      { text: "OCI AI Foundations", icon: IconCpu },
+      { text: "LLMs & GenAI", icon: IconSparkles }
+    ],
+    hoverGradient: "from-rose-900/40",
+    badgeColor: "text-rose-400 border-rose-500/30"
+  }
+];
+
+// SECTION 2: Hackathons (All Hackathon Certificates)
 const hackathonsData = [
   {
     id: "01",
     title: "Udbhav 2025 – AI Hackathon",
     organizer: "Dept of IT, Govt of Uttarakhand & UPES",
-    rank: "🏆 Top 5 Winner",
+    rank: "Top 5 Winner",
+    rankIcon: IconTrophy,
     date: "Nov 14, 2025",
     description: "Awarded Top 5 in the state-level emerging technology AI hackathon for building 'Agrasar' and 'GramSathi'—a bilingual AI public service co-pilot.",
     thumbnailUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
     fileUrl: "/certificates/hackathon/Udbhav 25_ Uttarakhand Government Hackathon Top 25.jpeg",
-    badges: ["State Govt Hackathon", "Top 5 Winner", "Bilingual AI"],
+    badges: [
+      { text: "State Govt Hackathon", icon: IconAward },
+      { text: "Top 5 Winner", icon: IconTrophy },
+      { text: "Bilingual AI", icon: IconRobot }
+    ],
     hoverGradient: "from-amber-900/40",
     badgeColor: "text-amber-400 border-amber-500/30"
   },
@@ -136,12 +187,17 @@ const hackathonsData = [
     id: "02",
     title: "Smart India Hackathon 2025",
     organizer: "Ministry of Education & AICTE",
-    rank: "🏆 SIH Top 45 Finalist",
+    rank: "SIH Top 45 Finalist",
+    rankIcon: IconTrophy,
     date: "Sep 11-12, 2025",
     description: "Selected among top finalist teams in SIH 2025 for engineering 'Nagar Rakshak', an AI civic complaint system with real-time GPS reporting.",
     thumbnailUrl: "/certificates/thumbnails/SIH 25_- Ahmad  Shadan  Taiyabi.png",
     fileUrl: "/certificates/hackathon/SIH 25_- Ahmad  Shadan  Taiyabi.pdf",
-    badges: ["Ministry of Education", "AICTE", "Top 45 Finalist"],
+    badges: [
+      { text: "Ministry of Education", icon: IconAward },
+      { text: "AICTE", icon: IconCheck },
+      { text: "Top 45 Finalist", icon: IconTrophy }
+    ],
     hoverGradient: "from-indigo-900/40",
     badgeColor: "text-indigo-400 border-indigo-500/30"
   },
@@ -149,12 +205,17 @@ const hackathonsData = [
     id: "03",
     title: "TCS CodeVita Season XII",
     organizer: "Tata Consultancy Services (TCS)",
-    rank: "🌐 Global Rank 3,641",
+    rank: "Global Rank 3,641",
+    rankIcon: IconGlobe,
     date: "2024 - 2025",
     description: "Achieved Global Rank 3,641 out of 100,000+ competitive programmers worldwide in TCS CodeVita global programming contest.",
     thumbnailUrl: "/certificates/thumbnails/TCS CodeVita Season 12 Certificate - shadan1221.png",
     fileUrl: "/certificates/hackathon/TCS CodeVita Season 12 Certificate - shadan1221.pdf",
-    badges: ["Global Contest", "Rank 3641", "Algorithms"],
+    badges: [
+      { text: "Global Contest", icon: IconGlobe },
+      { text: "Rank 3641", icon: IconTrophy },
+      { text: "Algorithms", icon: IconCode }
+    ],
     hoverGradient: "from-cyan-900/40",
     badgeColor: "text-cyan-400 border-cyan-500/30"
   },
@@ -162,12 +223,17 @@ const hackathonsData = [
     id: "04",
     title: "Devcation Delhi 2026",
     organizer: "GDG IGDTUW x IIT Delhi",
-    rank: "🚀 Hackathon Finalist",
+    rank: "Hackathon Finalist",
+    rankIcon: IconRocket,
     date: "2026",
     description: "Participated in Devcation Delhi 2026 organized by Google Developer Groups IGDTUW and IIT Delhi, building cutting-edge web & AI software.",
     thumbnailUrl: "/certificates/thumbnails/Devcation 26_ IITD.png",
     fileUrl: "/certificates/hackathon/Devcation 26_ IITD.pdf",
-    badges: ["GDG on Campus", "IIT Delhi", "Full Stack AI"],
+    badges: [
+      { text: "GDG on Campus", icon: IconRocket },
+      { text: "IIT Delhi", icon: IconAward },
+      { text: "Full Stack AI", icon: IconCpu }
+    ],
     hoverGradient: "from-emerald-900/40",
     badgeColor: "text-emerald-400 border-emerald-500/30"
   },
@@ -175,12 +241,17 @@ const hackathonsData = [
     id: "05",
     title: "#ImagineThat Idea Pitch",
     organizer: "Tata Group",
-    rank: "💡 Appreciation Award",
+    rank: "Appreciation Award",
+    rankIcon: IconBulb,
     date: "2025",
     description: "Earned Certificate of Appreciation for pitching innovative technological concepts in the Tata Group national idea pitch.",
     thumbnailUrl: "/certificates/thumbnails/Certificate of Appreciation- Tata  Group.png",
     fileUrl: "/certificates/hackathon/Certificate of Appreciation- Tata  Group.pdf",
-    badges: ["Tata Group", "Corporate Pitch", "Innovation"],
+    badges: [
+      { text: "Tata Group", icon: IconAward },
+      { text: "Corporate Pitch", icon: IconBulb },
+      { text: "Innovation", icon: IconSparkles }
+    ],
     hoverGradient: "from-blue-900/40",
     badgeColor: "text-blue-400 border-blue-500/30"
   },
@@ -188,12 +259,17 @@ const hackathonsData = [
     id: "06",
     title: "Adobe India Hackathon",
     organizer: "Adobe & Unstop",
-    rank: "🎯 Round 1 Qualifier",
+    rank: "Round 1 Qualifier",
+    rankIcon: IconTarget,
     date: "2024 - 2025",
     description: "Qualified Round 1 Online MCQ Assessment + Coding challenge in Adobe India national hackathon.",
     thumbnailUrl: "/certificates/thumbnails/adobe hackathon.png",
     fileUrl: "/certificates/hackathon/adobe hackathon.pdf",
-    badges: ["Adobe", "Competitive Coding", "Unstop"],
+    badges: [
+      { text: "Adobe", icon: IconTarget },
+      { text: "Competitive Coding", icon: IconCode },
+      { text: "Unstop", icon: IconCheck }
+    ],
     hoverGradient: "from-rose-900/40",
     badgeColor: "text-rose-400 border-rose-500/30"
   },
@@ -201,18 +277,24 @@ const hackathonsData = [
     id: "07",
     title: "Code Clash – IGDTUW",
     organizer: "IGDTUW & Unstop",
-    rank: "💻 Hackathon Participant",
+    rank: "Hackathon Participant",
+    rankIcon: IconCode,
     date: "2025",
     description: "Participated in Code Clash competitive programming hackathon hosted by IGDTUW and Unstop.",
     thumbnailUrl: "/certificates/thumbnails/code-clash-igdtuw.png",
     fileUrl: "/certificates/hackathon/code-clash-igdtuw.pdf",
-    badges: ["IGDTUW", "Code Clash", "Unstop"],
+    badges: [
+      { text: "IGDTUW", icon: IconAward },
+      { text: "Code Clash", icon: IconCode },
+      { text: "Unstop", icon: IconCheck }
+    ],
     hoverGradient: "from-purple-900/40",
     badgeColor: "text-purple-400 border-purple-500/30"
   }
 ];
 
-const certificationsData = [
+// SECTION 3: Course Certificates (AWS, Claude / Anthropic, and TCS iON Course Certifications)
+const certificatesData = [
   {
     id: "01",
     title: "AWS Graduate – Cloud Architecting",
@@ -222,7 +304,11 @@ const certificationsData = [
     thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.png",
     fileUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Architecting___Training_Badge_Badge20260413-31-ra3z1s.pdf",
     credlyUrl: "https://www.credly.com/go/XTEi9VXt",
-    badges: ["AWS Cloud Architecting", "60 Hours", "Credly Verified"],
+    badges: [
+      { text: "AWS Cloud Architecting", icon: IconCloud },
+      { text: "60 Hours", icon: IconCpu },
+      { text: "Credly Verified", icon: IconCheck }
+    ],
     hoverGradient: "from-purple-900/40",
     badgeColor: "text-purple-400 border-purple-500/30"
   },
@@ -235,7 +321,11 @@ const certificationsData = [
     thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.png",
     fileUrl: "/certificates/certifications/AWS_Academy_Graduate___Cloud_Operations___Training_Badge_Badge20251124-31-hrrbtf.pdf",
     credlyUrl: "https://www.credly.com/go/6tbfOKoi",
-    badges: ["AWS Cloud Operations", "40 Hours", "Credly Verified"],
+    badges: [
+      { text: "AWS Cloud Operations", icon: IconCloud },
+      { text: "40 Hours", icon: IconCpu },
+      { text: "Credly Verified", icon: IconCheck }
+    ],
     hoverGradient: "from-indigo-900/40",
     badgeColor: "text-indigo-400 border-indigo-500/30"
   },
@@ -248,22 +338,64 @@ const certificationsData = [
     thumbnailUrl: "/certificates/thumbnails/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.png",
     fileUrl: "/certificates/certifications/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20250426-28-923wxv.pdf",
     credlyUrl: "https://www.credly.com/go/6Xi5kR50",
-    badges: ["AWS Cloud Foundations", "20 Hours", "Credly Verified"],
+    badges: [
+      { text: "AWS Cloud Foundations", icon: IconCloud },
+      { text: "20 Hours", icon: IconCpu },
+      { text: "Credly Verified", icon: IconCheck }
+    ],
     hoverGradient: "from-blue-900/40",
     badgeColor: "text-blue-400 border-blue-500/30"
   },
   {
     id: "04",
     title: "AI Fluency: Framework & Foundations",
-    issuer: "Anthropic Academy",
+    issuer: "Anthropic Academy (Claude)",
     date: "2025 - 2026",
-    description: "Certified by Anthropic Academy on AI fluency frameworks, LLM architecture principles, prompt engineering, and agentic workflows.",
+    description: "Certified by Anthropic Academy on AI fluency frameworks, Claude LLM architecture principles, prompt engineering, and agentic workflows.",
     thumbnailUrl: "/certificates/thumbnails/Anthropic Academy- AI Fluency Framework & Foundations.png",
     fileUrl: "/certificates/certifications/Anthropic Academy- AI Fluency Framework & Foundations.pdf",
     credlyUrl: null,
-    badges: ["Anthropic AI", "AI Fluency", "LLM Frameworks"],
+    badges: [
+      { text: "Anthropic Claude AI", icon: IconBrain },
+      { text: "AI Fluency", icon: IconSparkles },
+      { text: "LLM Frameworks", icon: IconRobot }
+    ],
     hoverGradient: "from-emerald-900/40",
     badgeColor: "text-emerald-400 border-emerald-500/30"
+  },
+  {
+    id: "05",
+    title: "Generative AI Essentials",
+    issuer: "TCS iON x MPIT – CoE & TCS Foundation",
+    date: "July 2026 • Certificate ID: 8772-28783311-1016",
+    description: "Course completion under the 'AI for All' national initiative, mastering Generative AI principles, transformer architectures, prompt engineering, and real-world AI applications.",
+    thumbnailUrl: "/certificates/thumbnails/tcs_58908.png",
+    fileUrl: "/certificates/certificates/Ahmad_Taiyabi_58908.pdf",
+    credlyUrl: null,
+    badges: [
+      { text: "TCS iON", icon: IconCertificate },
+      { text: "Generative AI", icon: IconSparkles },
+      { text: "AI for All Initiative", icon: IconRobot }
+    ],
+    hoverGradient: "from-cyan-900/40",
+    badgeColor: "text-cyan-400 border-cyan-500/30"
+  },
+  {
+    id: "06",
+    title: "AI and Cybersecurity Awareness",
+    issuer: "TCS iON x MPIT – CoE & TCS Foundation",
+    date: "July 2026 • Certificate ID: 8770-28783311-1016",
+    description: "Course completion under the Guinness World Record enrolled 'AI for All' program, covering AI risk management, cyber threat detection, and secure system architectures.",
+    thumbnailUrl: "/certificates/thumbnails/tcs_58907.png",
+    fileUrl: "/certificates/certificates/Ahmad_Taiyabi_58907.pdf",
+    credlyUrl: null,
+    badges: [
+      { text: "TCS iON", icon: IconCertificate },
+      { text: "AI & Cybersecurity", icon: IconShieldCheck },
+      { text: "Guinness Record Initiative", icon: IconAward }
+    ],
+    hoverGradient: "from-teal-900/40",
+    badgeColor: "text-teal-400 border-teal-500/30"
   }
 ];
 
@@ -367,8 +499,8 @@ const ResumeSection = () => {
                     period: "March 2026 - July 2026",
                     desc: "Reduced production LLM inference latency by 57% (700ms to 300ms) while engineering production AI agents that automated appointment booking, rescheduling, cancellations, and follow-ups across voice and WhatsApp channels for a WhatsApp-first healthcare platform connecting patients to clinics across India and the UAE. Built real-time voice AI pipelines using Gemini, Twilio, and ElevenLabs TTS, and developed OCR pipelines to extract and structure patient information from medical documents.",
                     metrics: [
-                      "⚡ 57% LLM Latency Reduction (700ms → 300ms)",
-                      "🎙️ Voice AI & WhatsApp Agents"
+                      { text: "57% LLM Latency Reduction (700ms → 300ms)", icon: IconBolt },
+                      { text: "Voice AI & WhatsApp Agents", icon: IconMicrophone }
                     ],
                     stack: ["Agentic AI", "LLM Orchestration", "Voice AI", "Gemini API", "Twilio", "OCR"]
                   }
@@ -405,14 +537,18 @@ const ResumeSection = () => {
                       {/* Highlight Metric Badges */}
                       {job.metrics && (
                         <div className="flex flex-wrap gap-2 mb-4">
-                          {job.metrics.map((m, mIdx) => (
-                            <span
-                              key={mIdx}
-                              className="inline-flex items-center text-xs font-mono font-medium px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 shadow-[0_0_12px_rgba(16,185,129,0.2)]"
-                            >
-                              {m}
-                            </span>
-                          ))}
+                          {job.metrics.map((m, mIdx) => {
+                            const IconComponent = m.icon;
+                            return (
+                              <span
+                                key={mIdx}
+                                className="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 shadow-[0_0_12px_rgba(16,185,129,0.2)]"
+                              >
+                                {IconComponent && <IconComponent className="w-3.5 h-3.5 shrink-0" />}
+                                <span>{m.text}</span>
+                              </span>
+                            );
+                          })}
                         </div>
                       )}
 
@@ -484,9 +620,10 @@ const ResumeSection = () => {
                             href={project.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
+                            className="inline-flex items-center gap-1 font-mono text-xs text-white uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors"
                           >
-                            Live Demo
+                            <span>Live Demo</span>
+                            <IconExternalLink className="w-3 h-3" />
                           </a>
                         )}
                         <span className={`font-mono text-xs uppercase tracking-widest border px-3 py-1 rounded-full ${project.badgeColor}`}>
@@ -517,11 +654,15 @@ const ResumeSection = () => {
                     {/* Metric Badges */}
                     {project.metricBadges && project.metricBadges.length > 0 && (
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {project.metricBadges.map((mb, mbK) => (
-                          <span key={mbK} className={`text-xs font-mono font-medium px-3 py-1 rounded-full border backdrop-blur-md ${mb.color}`}>
-                            {mb.text}
-                          </span>
-                        ))}
+                        {project.metricBadges.map((mb, mbK) => {
+                          const IconComponent = mb.icon;
+                          return (
+                            <span key={mbK} className={`inline-flex items-center gap-1.5 text-xs font-mono font-medium px-3 py-1 rounded-full border backdrop-blur-md ${mb.color}`}>
+                              {IconComponent && <IconComponent className="w-3.5 h-3.5 shrink-0" />}
+                              <span>{mb.text}</span>
+                            </span>
+                          );
+                        })}
                       </div>
                     )}
 
@@ -544,68 +685,82 @@ const ResumeSection = () => {
           </div>
         </div>
 
-        {/* SECTION: HACKATHONS & HONORS (3-Column Card Grid) */}
-        <div id="hackathons" className="mb-16 md:mb-32 scroll-mt-24">
+        {/* SECTION 1: Certifications (Only Oracle Certification) */}
+        <div id="certifications" className="mb-16 md:mb-32 scroll-mt-24">
           <Reveal>
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl md:text-6xl font-heading font-bold tracking-tight text-white mb-4">
-                Hackathons & Honors
+                Certifications
               </h2>
               <p className="text-sm md:text-lg font-mono text-gray-400 max-w-2xl">
-                National-level hackathons, research achievements, and competition awards.
+                Official industry certification from Oracle Corporation.
               </p>
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {hackathonsData.map((item) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-center">
+            {certificationsData.map((cert) => (
               <div
-                key={item.id}
+                key={cert.id}
                 className="glass-panel rounded-3xl p-5 md:p-6 flex flex-col justify-between group hover:border-white/40 transition-all duration-500 relative overflow-hidden"
               >
-                <div className={`absolute inset-0 bg-gradient-to-t ${item.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div className={`absolute inset-0 bg-gradient-to-t ${cert.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   <div>
                     {/* Thumbnail Image Container */}
                     <div className="w-full aspect-[16/10] rounded-2xl bg-black/60 border border-white/10 overflow-hidden mb-5 relative group-hover:border-white/30 transition-colors">
                       <img
-                        src={item.thumbnailUrl}
-                        alt={item.title}
+                        src={cert.thumbnailUrl}
+                        alt={cert.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <span className={`absolute top-3 right-3 font-mono text-[10px] uppercase tracking-widest border px-3 py-1 rounded-full bg-black/70 backdrop-blur-md ${item.badgeColor}`}>
-                        {item.rank}
-                      </span>
                     </div>
 
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-white mb-2 leading-snug group-hover:text-cyan-300 transition-colors">
-                      {item.title}
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-white mb-2 leading-snug group-hover:text-rose-300 transition-colors">
+                      {cert.title}
                     </h3>
                     
-                    <p className="text-xs font-mono text-cyan-400 mb-2">
-                      {item.organizer} • {item.date}
+                    <p className="text-xs font-mono text-rose-400 mb-2">
+                      {cert.issuer} • {cert.date}
                     </p>
 
-                    <p className="text-xs text-gray-400 leading-relaxed mb-6 line-clamp-3">
-                      {item.description}
+                    <p className="text-xs text-gray-400 leading-relaxed mb-4 line-clamp-3">
+                      {cert.description}
                     </p>
+
+                    {/* Infographic Badges */}
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {cert.badges.map((b, bIdx) => {
+                        const IconComp = b.icon;
+                        return (
+                          <span
+                            key={bIdx}
+                            className="inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300"
+                          >
+                            {IconComp && <IconComp className="w-3 h-3 text-rose-400 shrink-0" />}
+                            <span>{b.text}</span>
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
 
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+                  <div className="pt-4 border-t border-white/10 flex items-center gap-2 flex-wrap">
                     <button
-                      onClick={() => setModalItem({ title: item.title, imageSrc: item.thumbnailUrl, fileUrl: item.fileUrl })}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-400 hover:text-black transition-all"
+                      onClick={() => setModalItem({ title: cert.title, imageSrc: cert.thumbnailUrl, fileUrl: cert.fileUrl })}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-rose-400 bg-rose-500/10 border border-rose-500/30 hover:bg-rose-400 hover:text-black transition-all"
                     >
                       <span>Preview Certificate</span>
                     </button>
                     <a
-                      href={item.fileUrl}
+                      href={cert.fileUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-mono text-gray-400 hover:text-white transition-colors"
+                      className="inline-flex items-center gap-1 px-3 py-2 rounded-full text-xs font-mono text-gray-300 bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-all"
                     >
-                      ↗
+                      <span>PDF</span>
+                      <IconExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
@@ -614,21 +769,111 @@ const ResumeSection = () => {
           </div>
         </div>
 
-        {/* SECTION: CERTIFICATIONS & CREDENTIALS (3-Column Card Grid) */}
-        <div id="certifications" className="mb-16 md:mb-32 scroll-mt-24">
+        {/* SECTION 2: Hackathons (All Hackathon Certificates) */}
+        <div id="hackathons" className="mb-16 md:mb-32 scroll-mt-24">
           <Reveal>
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl md:text-6xl font-heading font-bold tracking-tight text-white mb-4">
-                Certifications & Credentials
+                Hackathons
               </h2>
               <p className="text-sm md:text-lg font-mono text-gray-400 max-w-2xl">
-                Official industry certificates with live image previews and online verification badges.
+                National-level hackathons, research achievements, and competition awards.
               </p>
             </div>
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {certificationsData.map((cert) => (
+            {hackathonsData.map((item) => {
+              const RankIcon = item.rankIcon;
+              return (
+                <div
+                  key={item.id}
+                  className="glass-panel rounded-3xl p-5 md:p-6 flex flex-col justify-between group hover:border-white/40 transition-all duration-500 relative overflow-hidden"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-t ${item.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <div>
+                      {/* Thumbnail Image Container */}
+                      <div className="w-full aspect-[16/10] rounded-2xl bg-black/60 border border-white/10 overflow-hidden mb-5 relative group-hover:border-white/30 transition-colors">
+                        <img
+                          src={item.thumbnailUrl}
+                          alt={item.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className={`inline-flex items-center gap-1 absolute top-3 right-3 font-mono text-[10px] uppercase tracking-widest border px-3 py-1 rounded-full bg-black/70 backdrop-blur-md ${item.badgeColor}`}>
+                          {RankIcon && <RankIcon className="w-3 h-3 shrink-0" />}
+                          <span>{item.rank}</span>
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl md:text-2xl font-heading font-semibold text-white mb-2 leading-snug group-hover:text-cyan-300 transition-colors">
+                        {item.title}
+                      </h3>
+                      
+                      <p className="text-xs font-mono text-cyan-400 mb-2">
+                        {item.organizer} • {item.date}
+                      </p>
+
+                      <p className="text-xs text-gray-400 leading-relaxed mb-4 line-clamp-3">
+                        {item.description}
+                      </p>
+
+                      {/* Infographic Badges */}
+                      <div className="flex flex-wrap gap-1.5 mb-5">
+                        {item.badges.map((b, bIdx) => {
+                          const IconComp = b.icon;
+                          return (
+                            <span
+                              key={bIdx}
+                              className="inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300"
+                            >
+                              {IconComp && <IconComp className="w-3 h-3 text-cyan-400 shrink-0" />}
+                              <span>{b.text}</span>
+                            </span>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+                      <button
+                        onClick={() => setModalItem({ title: item.title, imageSrc: item.thumbnailUrl, fileUrl: item.fileUrl })}
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/30 hover:bg-cyan-400 hover:text-black transition-all"
+                      >
+                        <span>Preview Certificate</span>
+                      </button>
+                      <a
+                        href={item.fileUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-mono text-gray-400 hover:text-white transition-colors"
+                      >
+                        <IconExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* SECTION 3: Course Certificates (AWS, Claude / Anthropic, TCS iON) */}
+        <div id="certificates" className="mb-16 md:mb-32 scroll-mt-24">
+          <Reveal>
+            <div className="flex flex-col items-center text-center mb-12">
+              <h2 className="text-3xl md:text-6xl font-heading font-bold tracking-tight text-white mb-4">
+                Course Certificates
+              </h2>
+              <p className="text-sm md:text-lg font-mono text-gray-400 max-w-2xl">
+                AWS, Anthropic Claude, and TCS iON course completion certificates.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {certificatesData.map((cert) => (
               <div
                 key={cert.id}
                 className="glass-panel rounded-3xl p-5 md:p-6 flex flex-col justify-between group hover:border-white/40 transition-all duration-500 relative overflow-hidden"
@@ -654,9 +899,25 @@ const ResumeSection = () => {
                       {cert.issuer} • {cert.date}
                     </p>
 
-                    <p className="text-xs text-gray-400 leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-xs text-gray-400 leading-relaxed mb-4 line-clamp-3">
                       {cert.description}
                     </p>
+
+                    {/* Infographic Badges */}
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {cert.badges.map((b, bIdx) => {
+                        const IconComp = b.icon;
+                        return (
+                          <span
+                            key={bIdx}
+                            className="inline-flex items-center gap-1 text-[10px] font-mono font-medium px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-300"
+                          >
+                            {IconComp && <IconComp className="w-3 h-3 text-emerald-400 shrink-0" />}
+                            <span>{b.text}</span>
+                          </span>
+                        );
+                      })}
+                    </div>
                   </div>
 
                   <div className="pt-4 border-t border-white/10 flex items-center gap-2 flex-wrap">
@@ -667,7 +928,8 @@ const ResumeSection = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-400 hover:text-black transition-all"
                       >
-                        <span>Verify Credly</span> ↗
+                        <span>Verify Credly</span>
+                        <IconExternalLink className="w-3 h-3" />
                       </a>
                     ) : (
                       <button
@@ -683,7 +945,8 @@ const ResumeSection = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 px-3 py-2 rounded-full text-xs font-mono text-gray-300 bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-all"
                     >
-                      <span>PDF</span> ↗
+                      <span>PDF</span>
+                      <IconExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
@@ -765,7 +1028,7 @@ const ResumeSection = () => {
                 onClick={() => setModalItem(null)}
                 className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
               >
-                ✕
+                <IconX className="w-4 h-4" />
               </button>
             </div>
 
@@ -782,9 +1045,10 @@ const ResumeSection = () => {
                 href={modalItem.fileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2.5 rounded-full font-mono text-xs font-medium bg-white text-black hover:bg-gray-200 transition-colors uppercase tracking-wider"
+                className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full font-mono text-xs font-medium bg-white text-black hover:bg-gray-200 transition-colors uppercase tracking-wider"
               >
-                Open Full File ↗
+                <span>Open Full File</span>
+                <IconExternalLink className="w-3.5 h-3.5" />
               </a>
               <button
                 onClick={() => setModalItem(null)}

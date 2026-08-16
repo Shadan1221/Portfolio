@@ -6,7 +6,7 @@ def convert_pdfs():
     thumb_dir = os.path.join(base_dir, "thumbnails")
     os.makedirs(thumb_dir, exist_ok=True)
     
-    for sub in ["certifications", "hackathon"]:
+    for sub in ["certifications", "hackathon", "certificates"]:
         sub_path = os.path.join(base_dir, sub)
         if not os.path.exists(sub_path):
             continue
