@@ -176,8 +176,8 @@ const hackathonsData = [
     rankIcon: IconTrophy,
     date: "Nov 14, 2025",
     description: "Awarded Top 5 in the state-level emerging technology AI hackathon for building 'Agrasar' and 'GramSathi'—a bilingual AI public service co-pilot.",
-    thumbnailUrl: "/certificates/thumbnails/udbhav_2025_top25.webp",
-    fileUrl: "/certificates/hackathon/udbhav_2025_top25.jpeg",
+    thumbnailUrl: "/certificates/thumbnails/udbhav_2025_top5.webp",
+    fileUrl: "/certificates/hackathon/udbhav_2025_top5.jpeg",
     badges: [
       { text: "State Govt Hackathon", icon: IconAward },
       { text: "Top 5 Winner", icon: IconTrophy },
